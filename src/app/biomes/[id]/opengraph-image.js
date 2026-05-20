@@ -19,8 +19,9 @@ export function generateStaticParams() {
   return biomes.filter((b) => b.status !== 'unknown').map((b) => ({ id: b.id }));
 }
 
-export default function Image({ params }) {
-  const biome = biomes.find((b) => b.id === params.id);
+export default async function Image({ params }) {
+  const { id } = await params;
+  const biome = biomes.find((b) => b.id === id);
   if (!biome) return new ImageResponse(<div>Not found</div>, { ...size });
 
   const { fontData, fontData2, monoData } = getFonts();
