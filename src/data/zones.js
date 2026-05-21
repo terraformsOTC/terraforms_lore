@@ -626,7 +626,7 @@ export const zones = [
     palette: ['#303030', '#9f82ff'],
     suggestion: "Sepolia - Ethereum testnet",
     description:
-      "Claude suggestion: [SEP] likely abbreviates Sepolia, Ethereum's primary testnet since Goerli's deprecation. The dark grey #303030 base (shared with [HYCA] and [HOME]) evokes developer tooling, while lavender purple #9f82ff aligns with Ethereum ecosystem branding. A self-referential nod from a fully on-chain Ethereum project to the network's testing infrastructure.",
+      "Claude suggestion: [SEP] likely abbreviates Sepolia, Ethereum's primary testnet since Goerli's deprecation. The dark grey #303030 base (shared with [HYCA] and [HOME]) evokes developer tooling, while lavender purple #9f82ff aligns with Ethereum ecosystem branding. A self-referential nod from a fully on-chain Ethereum project to the network's testing infrastructure.\n\nThis zone may also be a reference to \"Eternal September\". Also known as \"the September that never ended\", this term describes an early internet era cultural phenomenon which took place in 1993 and 1994 when Internet service providers began offering Usenet access to the masses.\n\nThe flood of new users overwhelmed the existing norms and culture of forums, and forever altered their ability to self-moderate and enforce standards of conduct that were previously the default. Many Internet users from before Eternal September recall with nostalgia a time when the internet was civil, intellectually stimulating, free of trolls, and generally a place that offered refuge from the problems of the \"real world\".\n\nWe are living in Eternal September to this day.",
     images: { zone: null, reference: '/images/sepolia-reference.png' },
   },
   {
