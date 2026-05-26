@@ -316,7 +316,7 @@ export const zones = [
     reference: "Magic: The Gathering - Shahrazad, Arabian Nights, 1993",
     referenceDetail: "Art by Kaja Foglio - rarest zone, 10 parcels",
     description:
-      "Shahra is the rarest zone, with only 10 parcels. It references Shahrazad - a sorcery card from Magic: The Gathering's Arabian Nights set (1993), illustrated by Kaja Foglio, itself referencing the legendary storyteller of One Thousand and One Nights.",
+      "Shahra is the rarest zone, with only 10 parcels. It references Shahrazad - a sorcery card from Magic: The Gathering's Arabian Nights set (1993), illustrated by Kaja Foglio, itself referencing the legendary storyteller of One Thousand and One Nights. Shahrazad is notorious for its \"sub-game\" effect: when cast, both players pause the main game, shuffle their hands into their libraries, and play an entirely new game of Magic from scratch — the loser of that sub-game then loses half their remaining life total in the original game.",
     sourceUrl: 'https://x.com/TerraformsOTC/status/1954986097617871261',
     rarity: 'rarest - 10 parcels',
     images: { zone: null, reference: '/images/shahra-reference.png' },
@@ -324,17 +324,6 @@ export const zones = [
 
   // ─── UNCERTAIN ──────────────────────────────────────────────────────────
 
-  {
-    id: 'grove',
-    name: 'Grove',
-    status: 'uncertain',
-    category: 'uncertain',
-    palette: ['#fb8b01', '#399c42', '#0b704e', '#f34509', '#6f9d80', '#fb7712', '#10151b'],
-    reference: "Potentially lost",
-    description:
-      "113 has commented on this zone in the past, saying \"Grove I think was sourced from a photo? or maybe even a palette online. I don't recall 100%\".",
-    images: null,
-  },
   {
     id: 'kippsunn',
     name: 'Kippsunn',
@@ -407,6 +396,17 @@ export const zones = [
     guess: "TempleOS - Terry Davis, 2003-2019",
     description: "Community theory: 'Angel' maps directly to Terry Davis's theology - he claimed God spoke to him and directed him to build TempleOS, with angels as divine messengers. The 10-colour palette of bright saturated primaries (yellow, red, cyan, pink, teal, green) echoes the VGA 16-colour limitation that TempleOS famously runs at (640×480, 16 colours). Davis specified these constraints because he believed God mandated them.",
     images: { zone: null, reference: '/images/TempleOS-reference.webp' },
+  },
+  {
+    id: 'grove',
+    name: 'Grove',
+    status: 'uncertain',
+    category: 'cardGame',
+    palette: ['#fb8b01', '#399c42', '#0b704e', '#f34509', '#6f9d80', '#fb7712', '#10151b'],
+    guess: "Magic: The Gathering - Grove of the Burnwillows, Future Sight, 2007",
+    description:
+      "113 has commented on this zone in the past, saying \"Grove I think was sourced from a photo? or maybe even a palette online. I don't recall 100%\". The current strongest candidate is Grove of the Burnwillows - a rare and sought after Magic: The Gathering card first printed in the 2007 set Future Sight, known for producing red or green mana while giving opponents 1 life.",
+    images: { zone: null, reference: '/images/grove-reference.jpg' },
   },
   {
     id: 'bubble',
