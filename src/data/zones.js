@@ -353,6 +353,46 @@ export const zones = [
 
   // ─── UNCERTAIN — higher confidence ─────────────────────────────────────
 
+  // — technology —
+  {
+    id: 'muxtai-x1',
+    name: 'Muxtai X1',
+    status: 'uncertain',
+    category: 'technology',
+    palette: ['#ffcad5', '#082496', '#ed0e0a', '#f5f2e3', '#30a5ff'],
+    suggestion: "Sharp X1, 1982",
+    description:
+      "Claude suggestion: the Sharp X1 is a Japanese 8-bit home computer released by Sharp Corporation in 1982 (CZ-800C, produced through 1988). Its first model came in distinctive red - documented in retro-computing communities as 'beauty in red'. The X1 originated from Sharp's television division and uniquely featured a built-in TV tuner that allowed superimposing computer output onto live broadcasts. The pink, navy, red, cream, and bright cyan palette is consistent with early-80s Japanese consumer-electronics advertising.",
+    images: { zone: null, reference: '/images/Muxtaix1-reference.jpg' },
+  },
+
+  // — music —
+  {
+    id: 'warp',
+    name: 'Warp',
+    status: 'uncertain',
+    category: 'music',
+    palette: ['#e5291e', '#d3d3d3', '#8b3ede', '#dfdfdf'],
+    suggestion: "Warp Records",
+    description:
+      "Claude suggestion: Warp Records is a British independent record label founded in Sheffield in 1989 by Steve Beckett, Robert Mitchell and Robert Gordon. It specialises in electronic, indie rock and experimental music, and has released records by acts including Aphex Twin, Autechre, Boards of Canada, Squarepusher, and Brian Eno.",
+    images: { zone: null, reference: '/images/warprecords-reference.jpg' },
+  },
+
+  // — card game —
+  {
+    id: 'holo',
+    name: 'Holo',
+    status: 'uncertain',
+    category: 'cardGame',
+    palette: ['#fc5602', '#f2d601', '#1182c0', '#fb71c9', '#761fa5', '#256006', '#0577bd', '#fcdf02', '#fc6e03', '#eee8de'],
+    suggestion: "Pokémon TCG holographic foil",
+    description:
+      "Claude suggestion: 'Holo' is TCG slang for the holographic foil treatment on rare Pokémon cards. The ten-colour saturated rainbow palette mirrors the kinetic chromatic shifts produced by the micro-etched diffraction grating used on holo cards as they catch the light.",
+    images: { zone: null, reference: '/images/Holo-reference.jpg' },
+  },
+
+  // — video game —
   {
     id: 'dhampir',
     name: 'Dhampir',
@@ -398,28 +438,6 @@ export const zones = [
     ],
   },
   {
-    id: 'antenna',
-    name: 'Antenna',
-    status: 'uncertain',
-    category: 'animeFilm',
-    palette: ['#f4d35e', '#ee964b', '#f95738', '#083d77', '#ebebd3'],
-    suggestion: "FLCL (Fooly Cooly) - Gainax anime, 2000",
-    description:
-      "Claude suggestion: 'Antenna' is a central motif in FLCL - robots emerge from protagonist Naota's head through an N.O. channel, like antennas. The warm yellows (#f4d35e), oranges (#ee964b, #f95738), deep blue (#083d77), and cream (#ebebd3) match the anime's vibrant palette, especially Haruko's yellow Vespa and red jacket against blue skies.",
-    images: { zone: null, reference: '/images/antenna-reference.jpg' },
-  },
-  {
-    id: 'warp',
-    name: 'Warp',
-    status: 'uncertain',
-    category: 'music',
-    palette: ['#e5291e', '#d3d3d3', '#8b3ede', '#dfdfdf'],
-    suggestion: "Warp Records",
-    description:
-      "Claude suggestion: Warp Records is a British independent record label founded in Sheffield in 1989 by Steve Beckett, Robert Mitchell and Robert Gordon. It specialises in electronic, indie rock and experimental music, and has released records by acts including Aphex Twin, Autechre, Boards of Canada, Squarepusher, and Brian Eno.",
-    images: { zone: null, reference: '/images/warprecords-reference.jpg' },
-  },
-  {
     id: 'arc',
     name: 'Arc',
     status: 'uncertain',
@@ -442,17 +460,6 @@ export const zones = [
     images: { zone: null, reference: '/images/toads-reference.png' },
   },
   {
-    id: 'aria',
-    name: 'Aria',
-    status: 'uncertain',
-    category: 'animeFilm',
-    palette: ['#93d1de', '#718dbc', '#f9a4cb', '#dad7cc', '#f8fefe', '#f6e518', '#ec7e15', '#292726'],
-    suggestion: "Aria the Animation, 2005",
-    description:
-      "Claude suggestion: 'Aria' is the exact title of the 2005 iyashikei anime set in Neo-Venezia, a recreation of Venice on Aqua - a terraformed Mars. The palette maps precisely to the show's visual identity: canal blues #93d1de and #718dbc match the lagoon and reflected sky; pink #f9a4cb matches the undine gondoliers' uniforms; cream #dad7cc matches Neo-Venezia's stone architecture; near-white #f8fefe matches gondola hulls; warm yellow #f6e518 and orange #ec7e15 match the signature Venetian sunset glow; deep #292726 matches evening shadow. The terraforming setting is also a direct thematic echo of Terraforms itself.",
-    images: { zone: null, reference: '/images/aria-reference.jpg' },
-  },
-  {
     id: 'cur2',
     name: '[CUR2]',
     status: 'uncertain',
@@ -463,27 +470,29 @@ export const zones = [
       "Claude suggestion: [CUR2] is the exact abbreviated name of the Cure 2 healing spell from the original Final Fantasy (NES, 1987). The NES used truncated 4-character spell names due to memory constraints - CURE became CUR, CURE2 became CUR2. The two-colour palette of warm grey (#8e918c) and near-white (#eff1f4) maps directly to the White Magic spell UI: clinical, light, healing tones. Sits alongside [MENU] (Final Fantasy III) as another Final Fantasy bracket-notation reference.",
     images: { zone: null, reference: '/images/FF1%20white%20mage.webp' },
   },
+
+  // — anime / film —
   {
-    id: 'holo',
-    name: 'Holo',
+    id: 'antenna',
+    name: 'Antenna',
     status: 'uncertain',
-    category: 'cardGame',
-    palette: ['#fc5602', '#f2d601', '#1182c0', '#fb71c9', '#761fa5', '#256006', '#0577bd', '#fcdf02', '#fc6e03', '#eee8de'],
-    suggestion: "Pokémon TCG holographic foil",
+    category: 'animeFilm',
+    palette: ['#f4d35e', '#ee964b', '#f95738', '#083d77', '#ebebd3'],
+    suggestion: "FLCL (Fooly Cooly) - Gainax anime, 2000",
     description:
-      "Claude suggestion: 'Holo' is TCG slang for the holographic foil treatment on rare Pokémon cards. The ten-colour saturated rainbow palette mirrors the kinetic chromatic shifts produced by the micro-etched diffraction grating used on holo cards as they catch the light.",
-    images: { zone: null, reference: '/images/Holo-reference.jpg' },
+      "Claude suggestion: 'Antenna' is a central motif in FLCL - robots emerge from protagonist Naota's head through an N.O. channel, like antennas. The warm yellows (#f4d35e), oranges (#ee964b, #f95738), deep blue (#083d77), and cream (#ebebd3) match the anime's vibrant palette, especially Haruko's yellow Vespa and red jacket against blue skies.",
+    images: { zone: null, reference: '/images/antenna-reference.jpg' },
   },
   {
-    id: 'muxtai-x1',
-    name: 'Muxtai X1',
+    id: 'aria',
+    name: 'Aria',
     status: 'uncertain',
-    category: 'technology',
-    palette: ['#ffcad5', '#082496', '#ed0e0a', '#f5f2e3', '#30a5ff'],
-    suggestion: "Sharp X1, 1982",
+    category: 'animeFilm',
+    palette: ['#93d1de', '#718dbc', '#f9a4cb', '#dad7cc', '#f8fefe', '#f6e518', '#ec7e15', '#292726'],
+    suggestion: "Aria the Animation, 2005",
     description:
-      "Claude suggestion: the Sharp X1 is a Japanese 8-bit home computer released by Sharp Corporation in 1982 (CZ-800C, produced through 1988). Its first model came in distinctive red - documented in retro-computing communities as 'beauty in red'. The X1 originated from Sharp's television division and uniquely featured a built-in TV tuner that allowed superimposing computer output onto live broadcasts. The pink, navy, red, cream, and bright cyan palette is consistent with early-80s Japanese consumer-electronics advertising.",
-    images: { zone: null, reference: '/images/Muxtaix1-reference.jpg' },
+      "Claude suggestion: 'Aria' is the exact title of the 2005 iyashikei anime set in Neo-Venezia, a recreation of Venice on Aqua - a terraformed Mars. The palette maps precisely to the show's visual identity: canal blues #93d1de and #718dbc match the lagoon and reflected sky; pink #f9a4cb matches the undine gondoliers' uniforms; cream #dad7cc matches Neo-Venezia's stone architecture; near-white #f8fefe matches gondola hulls; warm yellow #f6e518 and orange #ec7e15 match the signature Venetian sunset glow; deep #292726 matches evening shadow. The terraforming setting is also a direct thematic echo of Terraforms itself.",
+    images: { zone: null, reference: '/images/aria-reference.jpg' },
   },
 
   // ─── UNCERTAIN — other ──────────────────────────────────────────────────
