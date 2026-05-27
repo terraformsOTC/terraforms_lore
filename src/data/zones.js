@@ -517,7 +517,7 @@ export const zones = [
     palette: ['#fb8b01', '#399c42', '#0b704e', '#f34509', '#6f9d80', '#fb7712', '#10151b'],
     reference: "Potentially lost",
     description:
-      "113 has commented on this zone in the past, saying \"Grove I think was sourced from a photo? or maybe even a palette online. I don't recall 100%\". Whilst the creators have explicitly stated Grove is not a reference to this card, some in the community are adamant this zone does in fact correspond to Grove of the Burnwillows, a Magic: The Gathering card from 2007. ",
+      "113 has commented on this zone in the past, saying \"Grove I think was sourced from a photo? or maybe even a palette online. I don't recall 100%\".\n\nWhilst the creators have explicitly stated Grove is not a reference to this card, some in the community are adamant this zone does in fact correspond to Grove of the Burnwillows, a Magic: The Gathering card from 2007.",
     images: null,
   },
   {
