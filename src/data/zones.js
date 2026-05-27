@@ -401,12 +401,12 @@ export const zones = [
     id: 'grove',
     name: 'Grove',
     status: 'uncertain',
-    category: 'cardGame',
+    category: 'uncertain',
     palette: ['#fb8b01', '#399c42', '#0b704e', '#f34509', '#6f9d80', '#fb7712', '#10151b'],
-    guess: "Magic: The Gathering - Grove of the Burnwillows, Future Sight, 2007",
+    reference: "Potentially lost",
     description:
-      "113 has commented on this zone in the past, saying \"Grove I think was sourced from a photo? or maybe even a palette online. I don't recall 100%\". The current strongest candidate is Grove of the Burnwillows - a rare and sought after Magic: The Gathering card first printed in the 2007 set Future Sight, known for producing red or green mana while giving opponents 1 life.",
-    images: { zone: null, reference: '/images/grove-reference.jpg' },
+      "113 has commented on this zone in the past, saying \"Grove I think was sourced from a photo? or maybe even a palette online. I don't recall 100%\".",
+    images: null,
   },
   {
     id: 'bubble',
