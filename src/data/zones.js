@@ -351,56 +351,143 @@ export const zones = [
     images: { zone: null, reference: '/images/riso-reference.jpg' },
   },
 
-  // ─── UNCERTAIN ──────────────────────────────────────────────────────────
+  // ─── UNCERTAIN — higher confidence ─────────────────────────────────────
 
   {
-    id: 'kippsunn',
-    name: 'Kippsunn',
+    id: 'dhampir',
+    name: 'Dhampir',
     status: 'uncertain',
-    category: null,
-    twin: true,
-    palette: ['#045939', '#e2b8d1', '#6390b5', '#fff4c0', '#60a278', '#b1becd', '#66aeb6', '#a0a9b8', '#081612'],
-    reference: "Special private / personal reference",
-    description:
-      "Kippsunn contains a special private reference made for a very early collector of Terraforms. The specific reference has not been made public. There appears to be a connection with the Greysunn zone as they both share the same suffix.",
-    images: null,
+    category: 'videoGame',
+    palette: ['#eb4034', '#eeeeee', '#202020'],
+    guess: "BloodRayne, 2002?",
+    description: "BloodRayne is a cult-classic action-adventure video game franchise originating in 2002, featuring a dhampir (half-human, half-vampire) protagonist named Rayne who hunts Nazis and supernatural threats.",
+    images: { zone: null, reference: '/images/Bloodrayne-reference.jpg' },
   },
   {
-    id: 'greysunn',
-    name: 'Greysunn',
+    id: 'yuna',
+    name: '[YUNA]',
     status: 'uncertain',
-    category: null,
-    twin: true,
-    palette: ['#bbbbbb', '#282828', '#292929', '#242424', '#393939', '#323232', '#313131', '#343434', '#202020'],
-    reference: "Special private / personal reference",
+    category: 'videoGame',
+    palette: ['#f1c8ff', '#000a1d'],
+    suggestion: "Final Fantasy X, 2001",
     description:
-      "Greysunn contains a special private reference made for a very early collector of Terraforms. The specific reference has not been made public. There appears to be a connection with the Kippsunn zone as they both share the same suffix.\n\nSome in the community have speculated that it may refer to The Black Sun, an exclusive, high-tech nightclub located within the Metaverse of Neal Stephenson's 1992 novel Snow Crash.",
-    images: null,
+      "Claude suggestion: the zone name is an exact match to Yuna, the lead character of Final Fantasy X (2001). The lavender #f1c8ff reflects her purple/lilac design, while the dark navy #000a1d evokes the deep night aesthetic of Spira. FFX would fit alongside the project's other JRPG references.",
+    images: { zone: null, reference: '/images/yuna-reference.png' },
   },
   {
-    id: 'shiro',
-    name: 'Shiro',
+    id: 'kairo',
+    name: 'Kairo',
     status: 'uncertain',
-    category: 'twinPalette',
-    palette: ['#7ffcc4', '#ffe481', '#ffcfb7', '#505050', '#f2e7ea'],
-    reference: "Twin palette - light mode of Treasure",
-    referenceDetail: "Paired with zone: Treasure",
+    category: 'videoGame',
+    palette: ['#ffe596', '#ffad3b', '#c57938', '#975330', '#574729', '#313638'],
+    suggestion: "Kairo, 2012",
     description:
-      "Shiro is the light mode twin of Treasure. The two zones form a paired set - light and dark versions of the same palette. Shiro (白) means \"white\" in Japanese.",
-    images: null,
+      "Claude suggestion: The zone name matches Kairo, a 2012 indie exploration game by Richard Perrin set in brutalist architecture with Egyptian influences. The warm amber-to-dark gradient (#ffe596 → #313638) maps to the game's sunlit sandstone environments fading into shadow.\n\nThe name also resonates with Kairos - the ancient Greek concept of the \"right\" or \"opportune\" moment in time. Unlike Chronos (sequential, measured time), Kairos is qualitative: the appointed moment, the window that must be seized. As a fully on-chain artwork built to last 10,000 years, Terraforms is deeply concerned with time - and Kairo may quietly gesture at this philosophical thread running through the whole project.",
+    images: { zone: null, reference: '/images/kairo-reference.jpg' },
+    referencedBy: [
+      {
+        description: "d347h.eth writes that Terraforms is a profound philosophical artwork about time, human temporality and computational achievement - and that the onchain maximalism and decay lore is just a surface.",
+        sourceLink: 'https://x.com/d347h_eth/status/1950575199063032183',
+        handle: '@d347h_eth',
+        tweet: {
+          text: "Terraforms by @mathcastles is a brilliant, profound and philosophical artwork about time, human temporality and computational achievement.\n\nTerraforms' \"onchain maximalism\" and \"10,000 years of decay\" lore one-shotted everyone back in 2021-2022, but it's just a surface and…",
+          author: 'd347h_eth',
+          date: 'Jul 30, 2025',
+        },
+      },
+    ],
   },
   {
-    id: 'treasure',
-    name: 'Treasure',
+    id: 'antenna',
+    name: 'Antenna',
     status: 'uncertain',
-    category: 'twinPalette',
-    palette: ['#323232', '#ffadde', '#7ffcc4', '#ffe481'],
-    reference: "Twin palette - dark mode of Shiro",
-    referenceDetail: "Paired with zone: Shiro",
+    category: 'animeFilm',
+    palette: ['#f4d35e', '#ee964b', '#f95738', '#083d77', '#ebebd3'],
+    suggestion: "FLCL (Fooly Cooly) - Gainax anime, 2000",
     description:
-      "Treasure is the dark mode twin of Shiro. The two zones form a paired set - dark and light versions of the same palette.",
-    images: null,
+      "Claude suggestion: 'Antenna' is a central motif in FLCL - robots emerge from protagonist Naota's head through an N.O. channel, like antennas. The warm yellows (#f4d35e), oranges (#ee964b, #f95738), deep blue (#083d77), and cream (#ebebd3) match the anime's vibrant palette, especially Haruko's yellow Vespa and red jacket against blue skies.",
+    images: { zone: null, reference: '/images/antenna-reference.jpg' },
   },
+  {
+    id: 'warp',
+    name: 'Warp',
+    status: 'uncertain',
+    category: 'music',
+    palette: ['#e5291e', '#d3d3d3', '#8b3ede', '#dfdfdf'],
+    suggestion: "Warp Records",
+    description:
+      "Claude suggestion: Warp Records is a British independent record label founded in Sheffield in 1989 by Steve Beckett, Robert Mitchell and Robert Gordon. It specialises in electronic, indie rock and experimental music, and has released records by acts including Aphex Twin, Autechre, Boards of Canada, Squarepusher, and Brian Eno.",
+    images: { zone: null, reference: '/images/warprecords-reference.jpg' },
+  },
+  {
+    id: 'arc',
+    name: 'Arc',
+    status: 'uncertain',
+    category: 'videoGame',
+    palette: ['#ec5526', '#f7f4e2', '#9ebbc1', '#f4ac12', '#1e1b1e'],
+    suggestion: "Arc System Works - Guilty Gear Strive, 2021",
+    description:
+      "Claude suggestion: Arc System Works is the developer behind Guilty Gear Strive. The signature orange-red (#ec5526), amber (#f4ac12), cream (#f7f4e2), slate blue (#9ebbc1), and near-black (#1e1b1e) directly echo GGS's iconic visual identity - the game's UI, character select screen, and promotional art all use this exact colour system. 'Arc' is also the studio abbreviation used by fans.",
+    images: { zone: null, reference: '/images/guiltygear-reference.jpg' },
+  },
+  {
+    id: 'toad',
+    name: 'Toad',
+    status: 'uncertain',
+    category: 'videoGame',
+    palette: ['#ffa8ee', '#eceb80', '#008080', '#ffe330', '#72b802', '#e85bcc', '#a28ef4', '#ff0e0e', '#b0e111', '#8ac163'],
+    suggestion: "Toad - Super Mario Bros. (Nintendo)",
+    description:
+      "Claude suggestion: Toad is a core Mario franchise character. The 10-colour palette maps to every known Toad variant: pink (#ffa8ee, #e85bcc) = Pink Toad, yellow (#eceb80, #ffe330) = Yellow Toad, teal (#008080) = Toad Brigade Captain, red (#ff0e0e) = classic Red-capped Toad, greens (#72b802, #b0e111, #8ac163) = Green Toad variants, lavender (#a28ef4) = Purple Toad. This breadth - covering all official colour variants - is consistent with how Terraforms references entire visual systems rather than single images.",
+    images: { zone: null, reference: '/images/toads-reference.png' },
+  },
+  {
+    id: 'aria',
+    name: 'Aria',
+    status: 'uncertain',
+    category: 'animeFilm',
+    palette: ['#93d1de', '#718dbc', '#f9a4cb', '#dad7cc', '#f8fefe', '#f6e518', '#ec7e15', '#292726'],
+    suggestion: "Aria the Animation, 2005",
+    description:
+      "Claude suggestion: 'Aria' is the exact title of the 2005 iyashikei anime set in Neo-Venezia, a recreation of Venice on Aqua - a terraformed Mars. The palette maps precisely to the show's visual identity: canal blues #93d1de and #718dbc match the lagoon and reflected sky; pink #f9a4cb matches the undine gondoliers' uniforms; cream #dad7cc matches Neo-Venezia's stone architecture; near-white #f8fefe matches gondola hulls; warm yellow #f6e518 and orange #ec7e15 match the signature Venetian sunset glow; deep #292726 matches evening shadow. The terraforming setting is also a direct thematic echo of Terraforms itself.",
+    images: { zone: null, reference: '/images/aria-reference.jpg' },
+  },
+  {
+    id: 'cur2',
+    name: '[CUR2]',
+    status: 'uncertain',
+    category: 'videoGame',
+    palette: ['#8e918c', '#eff1f4'],
+    suggestion: "CUR2 - White Magic spell, Final Fantasy, NES, 1987",
+    description:
+      "Claude suggestion: [CUR2] is the exact abbreviated name of the Cure 2 healing spell from the original Final Fantasy (NES, 1987). The NES used truncated 4-character spell names due to memory constraints - CURE became CUR, CURE2 became CUR2. The two-colour palette of warm grey (#8e918c) and near-white (#eff1f4) maps directly to the White Magic spell UI: clinical, light, healing tones. Sits alongside [MENU] (Final Fantasy III) as another Final Fantasy bracket-notation reference.",
+    images: { zone: null, reference: '/images/FF1%20white%20mage.webp' },
+  },
+  {
+    id: 'holo',
+    name: 'Holo',
+    status: 'uncertain',
+    category: 'cardGame',
+    palette: ['#fc5602', '#f2d601', '#1182c0', '#fb71c9', '#761fa5', '#256006', '#0577bd', '#fcdf02', '#fc6e03', '#eee8de'],
+    suggestion: "Pokémon TCG holographic foil",
+    description:
+      "Claude suggestion: 'Holo' is TCG slang for the holographic foil treatment on rare Pokémon cards. The ten-colour saturated rainbow palette mirrors the kinetic chromatic shifts produced by the micro-etched diffraction grating used on holo cards as they catch the light.",
+    images: { zone: null, reference: '/images/Holo-reference.jpg' },
+  },
+  {
+    id: 'muxtai-x1',
+    name: 'Muxtai X1',
+    status: 'uncertain',
+    category: 'technology',
+    palette: ['#ffcad5', '#082496', '#ed0e0a', '#f5f2e3', '#30a5ff'],
+    suggestion: "Sharp X1, 1982",
+    description:
+      "Claude suggestion: the Sharp X1 is a Japanese 8-bit home computer released by Sharp Corporation in 1982 (CZ-800C, produced through 1988). Its first model came in distinctive red - documented in retro-computing communities as 'beauty in red'. The X1 originated from Sharp's television division and uniquely featured a built-in TV tuner that allowed superimposing computer output onto live broadcasts. The pink, navy, red, cream, and bright cyan palette is consistent with early-80s Japanese consumer-electronics advertising.",
+    images: { zone: null, reference: '/images/Muxtaix1-reference.jpg' },
+  },
+
+  // ─── UNCERTAIN — other ──────────────────────────────────────────────────
+
   {
     id: 'blushing',
     name: 'Blushing',
@@ -412,19 +499,6 @@ export const zones = [
     description:
       "We know this about the Blushing zone, it is a reference to a classic isekai anime work, which was released 2 decades before the well known Re:Zero anime series.\n\nClaude has identified Fushigi Yûgi (1995-1996) as the most plausible contender: it is an isekai work, released almost exactly 20 years before Re:Zero, with a visual identity heavily built around pinks, roses, and lilacs.\n\nGiven the uncertainty, there are other contenders:\n· Magic Knight Rayearth - 1994-1995\n· El-Hazard: The Wanderers - 1995-1996\n· The Vision of Escaflowne - 1996\n· Revolutionary Girl Utena - 1997\n· Now and Then, Here and There - 1999\n· Cardcaptor Sakura - 1998-2000\n· Haibane Renmei - 2002\n· The Twelve Kingdoms - 2002-2003\n· Texhnolyze - 2003",
     images: { zone: null, reference: '/images/Fushigi-Yugi-reference.jpg' },
-  },
-
-  // ─── UNCERTAIN (continued) ─────────────────────────────────────────────
-
-  {
-    id: 'angel',
-    name: 'Angel',
-    status: 'uncertain',
-    category: null,
-    palette: ['#f6d903', '#eceff2', '#ff6650', '#f3b2e0', '#83dbf7', '#06917e', '#e0f2fa', '#cbeddf', '#e7e9ef', '#0dcdee'],
-    guess: "TempleOS - Terry Davis, 2003-2019",
-    description: "Community theory: 'Angel' maps directly to Terry Davis's theology - he claimed God spoke to him and directed him to build TempleOS, with angels as divine messengers. The 10-colour palette of bright saturated primaries (yellow, red, cyan, pink, teal, green) echoes the VGA 16-colour limitation that TempleOS famously runs at (640×480, 16 colours). Davis specified these constraints because he believed God mandated them.",
-    images: { zone: null, reference: '/images/TempleOS-reference.webp' },
   },
   {
     id: 'grove',
@@ -438,6 +512,16 @@ export const zones = [
     images: null,
   },
   {
+    id: 'angel',
+    name: 'Angel',
+    status: 'uncertain',
+    category: null,
+    palette: ['#f6d903', '#eceff2', '#ff6650', '#f3b2e0', '#83dbf7', '#06917e', '#e0f2fa', '#cbeddf', '#e7e9ef', '#0dcdee'],
+    guess: "TempleOS - Terry Davis, 2003-2019",
+    description: "Community theory: 'Angel' maps directly to Terry Davis's theology - he claimed God spoke to him and directed him to build TempleOS, with angels as divine messengers. The 10-colour palette of bright saturated primaries (yellow, red, cyan, pink, teal, green) echoes the VGA 16-colour limitation that TempleOS famously runs at (640×480, 16 colours). Davis specified these constraints because he believed God mandated them.",
+    images: { zone: null, reference: '/images/TempleOS-reference.webp' },
+  },
+  {
     id: 'bubble',
     name: 'Bubble',
     status: 'uncertain',
@@ -446,16 +530,6 @@ export const zones = [
     guess: "Bubble Bobble NES boxart / Bubblicious / Hubba Bubba?",
     description: "Community theories include the Bubble Bobble NES box art, Bubblicious gum, or Hubba Bubba bubble gum packaging.\n\nBubble Bobble is the strongest candidate: the NES box art uses an almost identical combination of red, hot pink, yellow, green, and deep blue - all eight colours in this palette find a direct counterpart in the artwork. The name 'Bubble' seals it.",
     images: { zone: null, reference: '/images/Bubblebobble-reference.webp' },
-  },
-  {
-    id: 'dhampir',
-    name: 'Dhampir',
-    status: 'uncertain',
-    category: null,
-    palette: ['#eb4034', '#eeeeee', '#202020'],
-    guess: "BloodRayne, 2002?",
-    description: "BloodRayne is a cult-classic action-adventure video game franchise originating in 2002, featuring a dhampir (half-human, half-vampire) protagonist named Rayne who hunts Nazis and supernatural threats.",
-    images: { zone: null, reference: '/images/Bloodrayne-reference.jpg' },
   },
   {
     id: 'intro-forest',
@@ -496,6 +570,83 @@ export const zones = [
     guess: "Rocket Pop (ice lolly)?",
     description: "Possible reference to a Rocket Pop - the classic red/white/blue ice lolly. The tricolour palette supports this theory.",
     images: { zone: null, reference: '/images/rocketpop-reference.jpg' },
+  },
+
+  // ─── TWIN PALETTES ───────────────────────────────────────────────────────
+
+  {
+    id: 'kippsunn',
+    name: 'Kippsunn',
+    status: 'uncertain',
+    category: null,
+    twin: true,
+    palette: ['#045939', '#e2b8d1', '#6390b5', '#fff4c0', '#60a278', '#b1becd', '#66aeb6', '#a0a9b8', '#081612'],
+    reference: "Special private / personal reference",
+    description:
+      "Kippsunn contains a special private reference made for a very early collector of Terraforms. The specific reference has not been made public. There appears to be a connection with the Greysunn zone as they both share the same suffix.",
+    images: null,
+  },
+  {
+    id: 'greysunn',
+    name: 'Greysunn',
+    status: 'uncertain',
+    category: null,
+    twin: true,
+    palette: ['#bbbbbb', '#282828', '#292929', '#242424', '#393939', '#323232', '#313131', '#343434', '#202020'],
+    reference: "Special private / personal reference",
+    description:
+      "Greysunn contains a special private reference made for a very early collector of Terraforms. The specific reference has not been made public. There appears to be a connection with the Kippsunn zone as they both share the same suffix.\n\nSome in the community have speculated that it may refer to The Black Sun, an exclusive, high-tech nightclub located within the Metaverse of Neal Stephenson's 1992 novel Snow Crash.",
+    images: null,
+  },
+  {
+    id: 'shiro',
+    name: 'Shiro',
+    status: 'uncertain',
+    category: 'twinPalette',
+    twin: true,
+    palette: ['#7ffcc4', '#ffe481', '#ffcfb7', '#505050', '#f2e7ea'],
+    reference: "Twin palette - light mode of Treasure",
+    referenceDetail: "Paired with zone: Treasure",
+    description:
+      "Shiro is the light mode twin of Treasure. The two zones form a paired set - light and dark versions of the same palette. Shiro (白) means \"white\" in Japanese.",
+    images: null,
+  },
+  {
+    id: 'treasure',
+    name: 'Treasure',
+    status: 'uncertain',
+    category: 'twinPalette',
+    twin: true,
+    palette: ['#323232', '#ffadde', '#7ffcc4', '#ffe481'],
+    reference: "Twin palette - dark mode of Shiro",
+    referenceDetail: "Paired with zone: Shiro",
+    description:
+      "Treasure is the dark mode twin of Shiro. The two zones form a paired set - dark and light versions of the same palette.",
+    images: null,
+  },
+  {
+    id: 'moon',
+    name: '[MOON]',
+    status: 'llm',
+    category: 'twinPalette',
+    twin: true,
+    palette: ['#9cb7d4', '#35443b'],
+    suggestion: "Twin palette with [NEON] - moonlight over dark green",
+    description:
+      "Claude suggestion: [MOON] and [NEON] are mathematically precise twins - they share the exact same dark green (#35443b) and their light colours have identical saturation (39%) and lightness (72%) in HSL, differing only in hue (blue 211° vs green 133°). This mirrors the confirmed Shiro/Treasure twin pair. The soft blue #9cb7d4 evokes moonlight.",
+    images: null,
+  },
+  {
+    id: 'neon',
+    name: '[NEON]',
+    status: 'llm',
+    category: 'twinPalette',
+    twin: true,
+    palette: ['#9cd4a8', '#35443b'],
+    suggestion: "Twin palette with [MOON] - neon glow over dark green",
+    description:
+      "Claude suggestion: [NEON] and [MOON] are mathematically precise twins - they share the exact same dark green (#35443b) and their light colours have identical saturation (39%) and lightness (72%) in HSL, differing only in hue (green 133° vs blue 211°). This mirrors the confirmed Shiro/Treasure twin pair. The mint green #9cd4a8 evokes a neon sign glow.",
+    images: null,
   },
 
   // ─── LLM SUGGESTIONS ────────────────────────────────────────────────────
@@ -559,17 +710,6 @@ export const zones = [
     images: { zone: null, reference: '/images/Oil%206%20Palette-reference.png' },
   },
   {
-    id: 'yuna',
-    name: '[YUNA]',
-    status: 'llm',
-    category: 'videoGame',
-    palette: ['#f1c8ff', '#000a1d'],
-    suggestion: "Final Fantasy X, 2001",
-    description:
-      "Claude suggestion: the zone name is an exact match to Yuna, the lead character of Final Fantasy X (2001). The lavender #f1c8ff reflects her purple/lilac design, while the dark navy #000a1d evokes the deep night aesthetic of Spira. FFX would fit alongside the project's other JRPG references.",
-    images: { zone: null, reference: '/images/yuna-reference.png' },
-  },
-  {
     id: 'mt-zuka',
     name: 'Mt Zuka',
     status: 'llm',
@@ -581,29 +721,6 @@ export const zones = [
     images: { zone: null, reference: '/images/osamu-tezuka.avif' },
   },
   {
-    id: 'kairo',
-    name: 'Kairo',
-    status: 'llm',
-    category: 'videoGame',
-    palette: ['#ffe596', '#ffad3b', '#c57938', '#975330', '#574729', '#313638'],
-    suggestion: "Kairo, 2012",
-    description:
-      "Claude suggestion: The zone name matches Kairo, a 2012 indie exploration game by Richard Perrin set in brutalist architecture with Egyptian influences. The warm amber-to-dark gradient (#ffe596 → #313638) maps to the game's sunlit sandstone environments fading into shadow.\n\nThe name also resonates with Kairos - the ancient Greek concept of the \"right\" or \"opportune\" moment in time. Unlike Chronos (sequential, measured time), Kairos is qualitative: the appointed moment, the window that must be seized. As a fully on-chain artwork built to last 10,000 years, Terraforms is deeply concerned with time - and Kairo may quietly gesture at this philosophical thread running through the whole project.",
-    images: { zone: null, reference: '/images/kairo-reference.jpg' },
-    referencedBy: [
-      {
-        description: "d347h.eth writes that Terraforms is a profound philosophical artwork about time, human temporality and computational achievement - and that the onchain maximalism and decay lore is just a surface.",
-        sourceLink: 'https://x.com/d347h_eth/status/1950575199063032183',
-        handle: '@d347h_eth',
-        tweet: {
-          text: "Terraforms by @mathcastles is a brilliant, profound and philosophical artwork about time, human temporality and computational achievement.\n\nTerraforms' \"onchain maximalism\" and \"10,000 years of decay\" lore one-shotted everyone back in 2021-2022, but it's just a surface and…",
-          author: 'd347h_eth',
-          date: 'Jul 30, 2025',
-        },
-      },
-    ],
-  },
-  {
     id: 'exduo',
     name: 'Exduo',
     status: 'llm',
@@ -613,28 +730,6 @@ export const zones = [
     description:
       "Claude suggestion: 'Exduo' means 'from two' in Latin - Klein explored duality between the material and immaterial. The deep blue #0012b5 closely matches International Klein Blue (#002FA7), light pink #ffe6fe matches his Monopink works, and warm white #fff7f5 represents the canvas substrate. Klein's ex-voto at Saint Rita contained exactly these three pigments.",
     images: { zone: null, reference: '/images/exduo-reference.jpg' },
-  },
-  {
-    id: 'antenna',
-    name: 'Antenna',
-    status: 'llm',
-    category: 'animeFilm',
-    palette: ['#f4d35e', '#ee964b', '#f95738', '#083d77', '#ebebd3'],
-    suggestion: "FLCL (Fooly Cooly) - Gainax anime, 2000",
-    description:
-      "Claude suggestion: 'Antenna' is a central motif in FLCL - robots emerge from protagonist Naota's head through an N.O. channel, like antennas. The warm yellows (#f4d35e), oranges (#ee964b, #f95738), deep blue (#083d77), and cream (#ebebd3) match the anime's vibrant palette, especially Haruko's yellow Vespa and red jacket against blue skies.",
-    images: { zone: null, reference: '/images/antenna-reference.jpg' },
-  },
-  {
-    id: 'warp',
-    name: 'Warp',
-    status: 'llm',
-    category: 'music',
-    palette: ['#e5291e', '#d3d3d3', '#8b3ede', '#dfdfdf'],
-    suggestion: "Warp Records",
-    description:
-      "Claude suggestion: Warp Records is a British independent record label founded in Sheffield in 1989 by Steve Beckett, Robert Mitchell and Robert Gordon. It specialises in electronic, indie rock and experimental music, and has released records by acts including Aphex Twin, Autechre, Boards of Canada, Squarepusher, and Brian Eno.",
-    images: { zone: null, reference: '/images/warprecords-reference.jpg' },
   },
   {
     id: 'pepo',
@@ -659,17 +754,6 @@ export const zones = [
     images: { zone: null, reference: '/images/sepolia-reference.png' },
   },
   {
-    id: 'arc',
-    name: 'Arc',
-    status: 'llm',
-    category: 'videoGame',
-    palette: ['#ec5526', '#f7f4e2', '#9ebbc1', '#f4ac12', '#1e1b1e'],
-    suggestion: "Arc System Works - Guilty Gear Strive, 2021",
-    description:
-      "Claude suggestion: Arc System Works is the developer behind Guilty Gear Strive. The signature orange-red (#ec5526), amber (#f4ac12), cream (#f7f4e2), slate blue (#9ebbc1), and near-black (#1e1b1e) directly echo GGS's iconic visual identity - the game's UI, character select screen, and promotional art all use this exact colour system. 'Arc' is also the studio abbreviation used by fans.",
-    images: { zone: null, reference: '/images/guiltygear-reference.jpg' },
-  },
-  {
     id: 'linosim',
     name: 'Linosim',
     status: 'llm',
@@ -679,17 +763,6 @@ export const zones = [
     description:
       "Claude suggestion: 'Linosim' reads as 'lino-sim' - a linear / zoning simulation. The five colours are a direct match to SimCity's classic zoning system: green (#29af3f) = residential, yellow (#dcc729) = industrial, blue (#26abd4) = commercial, dark grey (#404040) = roads, light grey (#c3c3c3) = empty terrain. SimCity (1989) invented this colour-coded zoning language, which has been copied by every city-builder since.",
     images: { zone: null, reference: '/images/simcity-reference.webp' },
-  },
-  {
-    id: 'toad',
-    name: 'Toad',
-    status: 'llm',
-    category: 'videoGame',
-    palette: ['#ffa8ee', '#eceb80', '#008080', '#ffe330', '#72b802', '#e85bcc', '#a28ef4', '#ff0e0e', '#b0e111', '#8ac163'],
-    suggestion: "Toad - Super Mario Bros. (Nintendo)",
-    description:
-      "Claude suggestion: Toad is a core Mario franchise character. The 10-colour palette maps to every known Toad variant: pink (#ffa8ee, #e85bcc) = Pink Toad, yellow (#eceb80, #ffe330) = Yellow Toad, teal (#008080) = Toad Brigade Captain, red (#ff0e0e) = classic Red-capped Toad, greens (#72b802, #b0e111, #8ac163) = Green Toad variants, lavender (#a28ef4) = Purple Toad. This breadth - covering all official colour variants - is consistent with how Terraforms references entire visual systems rather than single images.",
-    images: { zone: null, reference: '/images/toads-reference.png' },
   },
   {
     id: 'akileaf',
@@ -703,17 +776,6 @@ export const zones = [
     images: { zone: null, reference: '/images/aquilegia-reference.jpeg' },
   },
   {
-    id: 'aria',
-    name: 'Aria',
-    status: 'llm',
-    category: 'animeFilm',
-    palette: ['#93d1de', '#718dbc', '#f9a4cb', '#dad7cc', '#f8fefe', '#f6e518', '#ec7e15', '#292726'],
-    suggestion: "Aria the Animation, 2005",
-    description:
-      "Claude suggestion: 'Aria' is the exact title of the 2005 iyashikei anime set in Neo-Venezia, a recreation of Venice on Aqua - a terraformed Mars. The palette maps precisely to the show's visual identity: canal blues #93d1de and #718dbc match the lagoon and reflected sky; pink #f9a4cb matches the undine gondoliers' uniforms; cream #dad7cc matches Neo-Venezia's stone architecture; near-white #f8fefe matches gondola hulls; warm yellow #f6e518 and orange #ec7e15 match the signature Venetian sunset glow; deep #292726 matches evening shadow. The terraforming setting is also a direct thematic echo of Terraforms itself.",
-    images: { zone: null, reference: '/images/aria-reference.jpg' },
-  },
-  {
     id: 'nov',
     name: '[NOV]',
     status: 'llm',
@@ -723,29 +785,6 @@ export const zones = [
     description:
       "Claude suggestion: [NOV] almost certainly abbreviates November - specifically November 5th, Guy Fawkes Night. The two-colour palette is striking in its precision: deep charcoal (#303030) evokes the shadows and anonymity of V's world, while the single blood red (#ff4538) is the iconic colour of V for Vendetta's rose, cape lining, and propaganda imagery. 'Remember, remember, the fifth of November' - the name [NOV] is the bracket-notation hint.",
     images: { zone: null, reference: '/images/vvendetta-reference.jpg' },
-  },
-  {
-    id: 'cur2',
-    name: '[CUR2]',
-    status: 'llm',
-    category: 'videoGame',
-    palette: ['#8e918c', '#eff1f4'],
-    suggestion: "CUR2 - White Magic spell, Final Fantasy, NES, 1987",
-    description:
-      "Claude suggestion: [CUR2] is the exact abbreviated name of the Cure 2 healing spell from the original Final Fantasy (NES, 1987). The NES used truncated 4-character spell names due to memory constraints - CURE became CUR, CURE2 became CUR2. The two-colour palette of warm grey (#8e918c) and near-white (#eff1f4) maps directly to the White Magic spell UI: clinical, light, healing tones. Sits alongside [MENU] (Final Fantasy III) as another Final Fantasy bracket-notation reference.",
-    images: { zone: null, reference: '/images/FF1%20white%20mage.webp' },
-  },
-
-  {
-    id: 'holo',
-    name: 'Holo',
-    status: 'llm',
-    category: 'cardGame',
-    palette: ['#fc5602', '#f2d601', '#1182c0', '#fb71c9', '#761fa5', '#256006', '#0577bd', '#fcdf02', '#fc6e03', '#eee8de'],
-    suggestion: "Pokémon TCG holographic foil",
-    description:
-      "Claude suggestion: 'Holo' is TCG slang for the holographic foil treatment on rare Pokémon cards. The ten-colour saturated rainbow palette mirrors the kinetic chromatic shifts produced by the micro-etched diffraction grating used on holo cards as they catch the light.",
-    images: { zone: null, reference: '/images/Holo-reference.jpg' },
   },
   {
     id: 'hyphae',
@@ -845,43 +884,6 @@ export const zones = [
     description:
       "Claude suggestion: kalyx (κάλυξ) is Ancient Greek for 'husk' or 'flower bud' - the cup of sepals at the base of a flower. The mixed petal-tone palette (cyan, coral, teal, pink, lavender, cream, near-black) reads as a varied floral study. Less likely alternate: Calyx the British drum-and-bass producer (Larry Cons, Moving Shadow / Metalheadz), but the palette doesn't strongly suggest that musical context.",
     images: { zone: null, reference: '/images/Calyx-reference.jpg' },
-  },
-  {
-    id: 'muxtai-x1',
-    name: 'Muxtai X1',
-    status: 'llm',
-    category: 'technology',
-    palette: ['#ffcad5', '#082496', '#ed0e0a', '#f5f2e3', '#30a5ff'],
-    suggestion: "Sharp X1, 1982",
-    description:
-      "Claude suggestion: the Sharp X1 is a Japanese 8-bit home computer released by Sharp Corporation in 1982 (CZ-800C, produced through 1988). Its first model came in distinctive red - documented in retro-computing communities as 'beauty in red'. The X1 originated from Sharp's television division and uniquely featured a built-in TV tuner that allowed superimposing computer output onto live broadcasts. The pink, navy, red, cream, and bright cyan palette is consistent with early-80s Japanese consumer-electronics advertising.",
-    images: { zone: null, reference: '/images/Muxtaix1-reference.jpg' },
-  },
-  // ─── TWIN PALETTES ───────────────────────────────────────────────────────
-
-  {
-    id: 'moon',
-    name: '[MOON]',
-    status: 'llm',
-    category: 'twinPalette',
-    twin: true,
-    palette: ['#9cb7d4', '#35443b'],
-    suggestion: "Twin palette with [NEON] - moonlight over dark green",
-    description:
-      "Claude suggestion: [MOON] and [NEON] are mathematically precise twins - they share the exact same dark green (#35443b) and their light colours have identical saturation (39%) and lightness (72%) in HSL, differing only in hue (blue 211° vs green 133°). This mirrors the confirmed Shiro/Treasure twin pair. The soft blue #9cb7d4 evokes moonlight.",
-    images: null,
-  },
-  {
-    id: 'neon',
-    name: '[NEON]',
-    status: 'llm',
-    category: 'twinPalette',
-    twin: true,
-    palette: ['#9cd4a8', '#35443b'],
-    suggestion: "Twin palette with [MOON] - neon glow over dark green",
-    description:
-      "Claude suggestion: [NEON] and [MOON] are mathematically precise twins - they share the exact same dark green (#35443b) and their light colours have identical saturation (39%) and lightness (72%) in HSL, differing only in hue (green 133° vs blue 211°). This mirrors the confirmed Shiro/Treasure twin pair. The mint green #9cd4a8 evokes a neon sign glow.",
-    images: null,
   },
 
   // ─── UNKNOWN ─────────────────────────────────────────────────────────────
