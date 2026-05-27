@@ -308,6 +308,18 @@ export const zones = [
     images: { zone: null, reference: '/images/soon-reference.png' },
   },
   {
+    id: 'cradle',
+    name: 'Cradle',
+    status: 'confirmed',
+    category: 'cardGame',
+    palette: ['#efc201', '#104d28', '#e0632b', '#cec4be', '#43882f', '#90ad27', '#ffe7d3', '#de797d'],
+    reference: "Magic: The Gathering - Gaea's Cradle, Urza's Saga, 1998",
+    referenceDetail: "Art by Mark Zug — Urza's Saga set (1998)",
+    description:
+      "Gaea's Cradle is among the most iconic cards in Magic: The Gathering, originating from the Urza's Saga set (1998), illustrated by Mark Zug. The card is named after Gaea — a recurring embodiment of nature and primal life within Magic's lore — and is notorious for its explosive green mana generation.",
+    images: { zone: null, reference: '/images/Cradle-reference.jpeg' },
+  },
+  {
     id: 'shahra',
     name: 'Shahra',
     status: 'confirmed',
@@ -858,7 +870,6 @@ export const zones = [
   // ─── UNKNOWN ─────────────────────────────────────────────────────────────
   { id: 'boss',   name: '[BOSS]',  status: 'unknown', category: null, palette: ['#f8f7ff', '#ee0000'], images: null },
   { id: 'home',   name: '[HOME]',  status: 'unknown', category: null, palette: ['#303030', '#fff5e6'], images: null },
-  { id: 'cradle', name: 'Cradle',  status: 'unknown', category: null, palette: ['#efc201', '#104d28', '#e0632b', '#cec4be', '#43882f', '#90ad27', '#ffe7d3', '#de797d'], images: null },
   { id: 'wen',         name: '[WEN]',         status: 'unknown', category: null, palette: ['#fffdf0', '#1e1c32'], images: null },
   { id: 'dynacrypts',   name: 'Dynacrypts',    status: 'unknown', category: null, palette: ['#f98284', '#feaae4', '#b0a9e4', '#accce4', '#b3e3da', '#b0eb93', '#fff7a0', '#ffc384', '#dea38b', '#28282e'], images: null },
   { id: 'pfpfpfpbbx80', name: 'Pfpfpfpbbx80', status: 'unknown', category: null, palette: ['#f772b5', '#435d5a', '#5a7b70', '#e83b3b', '#ccdf6d', '#aede6a', '#ffffff', '#e4dde7'], images: null },
