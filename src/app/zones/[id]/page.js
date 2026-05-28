@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import StatusBadge from '@/components/StatusBadge';
 import ParcelViewer from '@/components/ParcelViewer';
 import { MetadataTable, ExternalLinks } from '@/components/DetailSections';
+import HypercastleMap, { groupHypercastle, levelLabel } from '@/components/HypercastleMap';
 import { zones, CATEGORIES } from '@/data/zones';
 import { ZONE_PARCEL_IDS } from '@/data/parcelIds';
 
@@ -111,9 +112,13 @@ export default async function ZonePage({ params }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Header />
-      <main className="flex-1 px-6" style={{ maxWidth: '900px' }}>
+      <div
+        className="flex-1 px-6"
+        style={{ display: 'flex', gap: '48px', alignItems: 'flex-start' }}
+      >
+      <main style={{ flex: '1 1 0', minWidth: 0, maxWidth: '900px' }}>
 
-        <a href="/" className="text-xs dim-40 inline-block mb-8">← zone references</a>
+        <a href="/" className="text-sm dim-55 inline-block mb-8">← zone references</a>
 
         {/* Palette */}
         {zone.palette?.length > 0 && (
@@ -127,11 +132,11 @@ export default async function ZonePage({ params }) {
                       {color}
                     </p>
                   </div>
-                  <pre className="text-xs mt-2 dim-35" style={{ fontFamily: 'inherit', margin: '6px 0 0' }}>{i}</pre>
+                  <pre className="text-xs mt-2 dim-55" style={{ fontFamily: 'inherit', margin: '6px 0 0' }}>{i}</pre>
                 </div>
               ))}
             </div>
-            <p className="text-xs mt-3 dim-25">{zone.palette.length} colour{zone.palette.length !== 1 ? 's' : ''}</p>
+            <p className="text-xs mt-3 dim-55">{zone.palette.length} colour{zone.palette.length !== 1 ? 's' : ''}</p>
           </div>
         )}
 
@@ -143,29 +148,21 @@ export default async function ZonePage({ params }) {
 
         <hr style={{ border: 'none', borderTop: '1px solid rgba(232,232,232,0.12)', marginBottom: '24px' }} />
 
-        <p className="text-sm dim-40 mb-4">mathcastles reference</p>
+        <p className="text-sm dim-55 mb-4">mathcastles reference</p>
         <p className="text-sm mb-8" style={{ opacity: isTheory ? 0.65 : 0.85 }}>{ref}</p>
         <p className="text-sm mb-10 dim-80" style={{ lineHeight: '1.8', whiteSpace: 'pre-line' }}>{renderWithLinks(zone.description)}</p>
 
-        {/* Hypercastle location */}
-        <div className="mb-10">
-          <p className="text-xs dim-40 mb-3">hypercastle location</p>
-          {(() => {
-            if (!zone.hypercastle?.length) return <p className="text-sm dim-40">unknown</p>;
-            const allSpan = zone.hypercastle.every(loc => loc.elevation === undefined);
-            if (allSpan && zone.hypercastle.length > 1) {
-              const levels = zone.hypercastle.map(loc => loc.level);
-              return <p className="text-sm dim-80 mb-1">levels {Math.min(...levels)} - {Math.max(...levels)} · all elevations</p>;
-            }
-            return zone.hypercastle.map((loc, i) => (
-              <p key={i} className="text-sm dim-80 mb-1">
-                {loc.elevation !== undefined
-                  ? `level ${loc.level} · elevation ${loc.elevation > 0 ? '+' : ''}${loc.elevation}`
-                  : `level ${loc.level} · all elevations`}
-              </p>
-            ));
-          })()}
-        </div>
+        {/* Hypercastle position — mobile only (desktop shows the visual map) */}
+        {zone.hypercastle?.length > 0 && (
+          <div className="mb-10 lg:hidden">
+            <p className="text-sm dim-55 mb-3">hypercastle position</p>
+            {[...groupHypercastle(zone.hypercastle).entries()]
+              .sort((a, b) => b[0] - a[0])
+              .map(([level, entry]) => (
+                <p key={level} className="text-sm dim-80 mb-1">{levelLabel(level, entry)}</p>
+              ))}
+          </div>
+        )}
 
         {/* Parcel + reference image side by side */}
         {(parcelIds || hasReference) && (
@@ -178,7 +175,7 @@ export default async function ZonePage({ params }) {
             )}
             {hasReference && (
               <div>
-                <p className="text-xs mb-2 dim-35">{isTheory ? 'possible reference' : 'reference'}</p>
+                <p className="text-xs mb-2 dim-55">{isTheory ? 'possible reference' : 'reference'}</p>
                 <img
                   src={zone.images.reference}
                   alt={ref}
@@ -246,6 +243,17 @@ export default async function ZonePage({ params }) {
           </div>
         )}
       </main>
+
+      {/* Desktop-only hypercastle map sidebar */}
+      {zone.hypercastle?.length > 0 && (
+        <aside
+          className="hidden lg:block"
+          style={{ width: '350px', flexShrink: 0, position: 'sticky', top: '40px' }}
+        >
+          <HypercastleMap hypercastle={zone.hypercastle} />
+        </aside>
+      )}
+      </div>
       <Footer />
     </div>
   );

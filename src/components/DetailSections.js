@@ -15,13 +15,13 @@ export function ImageGrid({ images, name, altText, isTheory, sampleLabel = 'zone
     >
       {images.zone && (
         <div>
-          <p className="text-xs mb-2 dim-35">{sampleLabel}</p>
+          <p className="text-xs mb-2 dim-55">{sampleLabel}</p>
           <img src={images.zone} alt={`${name} ${sampleLabel}`} className="w-full block" loading="lazy" />
         </div>
       )}
       {images.reference && (
         <div>
-          <p className="text-xs mb-2 dim-35">{isTheory ? 'possible reference' : 'reference'}</p>
+          <p className="text-xs mb-2 dim-55">{isTheory ? 'possible reference' : 'reference'}</p>
           <img src={images.reference} alt={altText} className="w-full block" loading="lazy" />
         </div>
       )}
@@ -37,7 +37,7 @@ export function MetadataTable({ rows }) {
     <div className="mb-10 border-top">
       {valid.map(({ label, value }) => (
         <div key={label} className="flex justify-between items-center py-3 border-bottom">
-          <span className="text-xs dim-40">{label}</span>
+          <span className="text-xs dim-55">{label}</span>
           <span className="text-xs dim-80">{value}</span>
         </div>
       ))}
@@ -49,15 +49,15 @@ export function ExternalLinks({ referenceLink, explorerUrl, sourceUrl }) {
   return (
     <div className="flex gap-6 flex-wrap mb-20">
       {referenceLink && (
-        <a href={referenceLink} target="_blank" rel="noopener noreferrer" className="text-xs dim-40">
+        <a href={referenceLink} target="_blank" rel="noopener noreferrer" className="text-xs dim-55">
           reference ↗
         </a>
       )}
-      <a href={explorerUrl} target="_blank" rel="noopener noreferrer" className="text-xs dim-40">
+      <a href={explorerUrl} target="_blank" rel="noopener noreferrer" className="text-xs dim-55">
         view on explorer ↗
       </a>
       {sourceUrl && (
-        <a href={sourceUrl} target="_blank" rel="noopener noreferrer" className="text-xs dim-40">
+        <a href={sourceUrl} target="_blank" rel="noopener noreferrer" className="text-xs dim-55">
           source thread ↗
         </a>
       )}

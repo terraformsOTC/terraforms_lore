@@ -16,7 +16,7 @@ export default function ParcelViewer({ parcelIds, zoneName }) {
 
   return (
     <div>
-      <p className="text-xs mb-2 dim-35">zone parcel</p>
+      <p className="text-xs mb-2 dim-55">zone parcel</p>
       <div style={{ position: 'relative', width: '100%', maxWidth: '277px', aspectRatio: '277 / 400' }}>
         {/* Loading placeholder */}
         <div
@@ -35,7 +35,7 @@ export default function ParcelViewer({ parcelIds, zoneName }) {
         )}
       </div>
       {tokenId && (
-        <p className="text-xs mt-2 dim-25">#{tokenId}</p>
+        <p className="text-xs mt-2 dim-55">#{tokenId}</p>
       )}
     </div>
   );
