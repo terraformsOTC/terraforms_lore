@@ -147,6 +147,22 @@ export default async function ZonePage({ params }) {
         <p className="text-sm mb-8" style={{ opacity: isTheory ? 0.65 : 0.85 }}>{ref}</p>
         <p className="text-sm mb-10 dim-80" style={{ lineHeight: '1.8', whiteSpace: 'pre-line' }}>{renderWithLinks(zone.description)}</p>
 
+        {/* Hypercastle location */}
+        <div className="mb-10">
+          <p className="text-xs dim-40 mb-3">hypercastle location</p>
+          {zone.hypercastle?.length > 0 ? (
+            zone.hypercastle.map((loc, i) => (
+              <p key={i} className="text-sm dim-80 mb-1">
+                {loc.elevation !== undefined
+                  ? `level ${loc.level} · elevation ${loc.elevation > 0 ? '+' : ''}${loc.elevation}`
+                  : `level ${loc.level} · all elevations`}
+              </p>
+            ))
+          ) : (
+            <p className="text-sm dim-40">unknown</p>
+          )}
+        </div>
+
         {/* Parcel + reference image side by side */}
         {(parcelIds || hasReference) && (
           <div
