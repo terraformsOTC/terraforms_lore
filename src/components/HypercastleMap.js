@@ -52,7 +52,9 @@ export default function HypercastleMap({ hypercastle }) {
 
   return (
     <div style={{ fontFamily: 'Courier New, monospace', paddingLeft: '20px' }}>
-      <p style={{ fontSize: '14px', opacity: 0.55, marginBottom: '20px', letterSpacing: '0.04em' }}>
+      {/* line-height + margin mirror the "zone references" link (text-sm, mb-8)
+          so the first diamond row aligns with the top of the palette swatches */}
+      <p style={{ fontSize: '14px', lineHeight: '1.25rem', opacity: 0.55, marginBottom: '32px', letterSpacing: '0.04em' }}>
         hypercastle position
       </p>
 
