@@ -1,14 +1,13 @@
 // Desktop-only hypercastle position diagram.
 // 20 stacked flat diamond tiles (level 20 at top → level 1 at bottom).
-// Active level(s) are highlighted and joined to a label that lists the
-// zone's elevation(s) on that level — e.g. "Level 16: -2", "Level 14: +4, -4".
+// Active level(s) are highlighted and labelled with the zone's elevation(s)
+// on that level — e.g. "Level 16: -2", "Level 14: +4, -4".
 // Levels that occupy the whole layer (no elevation) just read "Level N".
 
 const TILE_H      = 10;   // px — diamond tile height
 const ROW_GAP     = 15;   // px — vertical gap between tiles (even rhythm)
 const DIAMOND_COL = 150;  // px — column the diamond is centred in (widest tile)
-const DASH_REGION = 30;   // px — gap between diamond column and label start
-const DASH_GAP    = 8;    // px — gap between dashed line and label text
+const LABEL_GAP   = 30;   // px — gap between diamond column and label start
 const MAX_CELLS   = 13;
 
 const ACTIVE_COLOR  = 'rgba(232,232,232,0.90)';
@@ -62,14 +61,11 @@ export default function HypercastleMap({ hypercastle }) {
           const tileW    = Math.round((WIDTHS[level] / MAX_CELLS) * DIAMOND_COL);
           const entry    = byLevel.get(level);
           const isActive = entry !== undefined;
-          const tipX     = (DIAMOND_COL + tileW) / 2; // x of the diamond's right point
-          const dashW    = DIAMOND_COL + DASH_REGION - DASH_GAP - tipX;
 
           return (
             <div
               key={level}
               style={{
-                position:   'relative',
                 display:    'flex',
                 alignItems: 'center',
                 height:     `${TILE_H}px`,
@@ -94,24 +90,10 @@ export default function HypercastleMap({ hypercastle }) {
                 />
               </div>
 
-              {/* Dashed connector — diamond's right tip → just before the label */}
-              {isActive && (
-                <div
-                  style={{
-                    position:  'absolute',
-                    left:      `${tipX}px`,
-                    width:     `${dashW}px`,
-                    top:       '50%',
-                    borderTop: `1px dashed ${ACTIVE_COLOR}`,
-                    opacity:   0.6,
-                  }}
-                />
-              )}
-
               {/* Level label — left-aligned at a fixed x, never wraps */}
               <span
                 style={{
-                  marginLeft: `${DASH_REGION}px`,
+                  marginLeft: `${LABEL_GAP}px`,
                   fontSize:   '14px',
                   whiteSpace: 'nowrap',
                   flexShrink: 0,
