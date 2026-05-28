@@ -238,7 +238,7 @@ export const zones = [
       "The blue [MENU] zone is a reference to the iconic deep-blue menu interface of Final Fantasy III.",
     sourceUrl: 'https://x.com/TerraformsOTC/status/1954986097617871261',
     creditTo: '@null_lines',
-    images: { zone: null, reference: '/images/menu-reference.png' },
+    images: { zone: null, reference: '/images/Menu-reference.webp' },
   },
   {
     id: 'promiselands',
