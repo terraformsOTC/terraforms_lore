@@ -1,17 +1,22 @@
 // Desktop-only hypercastle position diagram.
-// 20 stacked flat diamond tiles (level 20 at top → level 1 at bottom).
-// Active level(s) are highlighted and labelled with the zone's elevation(s)
-// on that level — e.g. "Level 16: -2", "Level 14: +4, -4".
-// Levels that occupy the whole layer (no elevation) just read "Level N".
+// 20 stacked dark-grey diamond tiles (level 20 at top → level 1 at bottom).
+// A zone's active level gets a bright white centre box, with a semi-transparent
+// white accent diamond per elevation offset above (+N) or below (-N); 0 overlaps
+// the centre. Multiple elevations (e.g. Holo +4/-4) stack accents above and below.
+// Whole-layer levels (no elevation, e.g. Alto/Kairo) get a single centred
+// accent. At the extremes (±4) the accent tip touches the base box.
 
-const TILE_H      = 10;   // px — diamond tile height
-const ROW_GAP     = 15;   // px — vertical gap between tiles (even rhythm)
-const DIAMOND_COL = 150;  // px — column the diamond is centred in (widest tile)
-const LABEL_GAP   = 30;   // px — gap between diamond column and label start
+const TILE_H      = 10;          // px — diamond tile height
+const ROW_GAP     = 15;          // px — vertical gap between tiles (even rhythm)
+const DIAMOND_COL = 150;         // px — column the diamond is centred in (widest tile)
+const LABEL_GAP   = 30;          // px — gap between diamond column and label start
 const MAX_CELLS   = 13;
+const ELEV_STEP   = TILE_H / 4;  // px per elevation unit → ±4 touches the base
 
-const ACTIVE_COLOR  = 'rgba(232,232,232,0.90)';
-const INACTIVE_TILE = 'rgba(232,232,232,0.09)';
+const BASE_TILE   = 'rgba(232,232,232,0.09)'; // dark grey base box (inactive levels)
+const ACTIVE_BASE = 'rgba(232,232,232,0.90)'; // bright white centre box for the active level
+const ACCENT      = 'rgba(232,232,232,0.60)'; // semi-transparent white elevation accent
+const DIAMOND   = 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)';
 
 // Width in cells per level — peak at 13–14, tapering to a point at 1 and 20.
 const WIDTHS = [
@@ -45,6 +50,14 @@ export function levelLabel(level, entry) {
   return `Level ${level}: ${list}`;
 }
 
+// Elevation positions (in units) to draw an accent for. Whole-layer levels
+// and bare elevation-0 both render a single centred accent.
+function accentElevations(entry) {
+  if (!entry) return [];
+  if (entry.all || entry.elevs.length === 0) return [0];
+  return entry.elevs;
+}
+
 export default function HypercastleMap({ hypercastle }) {
   if (!hypercastle?.length) return null;
 
@@ -67,29 +80,39 @@ export default function HypercastleMap({ hypercastle }) {
           return (
             <div
               key={level}
-              style={{
-                display:    'flex',
-                alignItems: 'center',
-                height:     `${TILE_H}px`,
-              }}
+              style={{ display: 'flex', alignItems: 'center', height: `${TILE_H}px` }}
             >
-              {/* Diamond, centred in a fixed-width column */}
+              {/* Diamond column — dark-grey base box plus elevation accent(s) */}
               <div
-                style={{
-                  width:          `${DIAMOND_COL}px`,
-                  display:        'flex',
-                  justifyContent: 'center',
-                  flexShrink:     0,
-                }}
+                style={{ position: 'relative', width: `${DIAMOND_COL}px`, height: `${TILE_H}px`, flexShrink: 0 }}
               >
                 <div
                   style={{
+                    position:        'absolute',
+                    left:            '50%',
+                    top:             '50%',
+                    transform:       'translate(-50%, -50%)',
                     width:           `${tileW}px`,
                     height:          `${TILE_H}px`,
-                    backgroundColor: isActive ? ACTIVE_COLOR : INACTIVE_TILE,
-                    clipPath:        'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
+                    backgroundColor: isActive ? ACTIVE_BASE : BASE_TILE,
+                    clipPath:        DIAMOND,
                   }}
                 />
+                {accentElevations(entry).map((e, i) => (
+                  <div
+                    key={i}
+                    style={{
+                      position:        'absolute',
+                      left:            '50%',
+                      top:             '50%',
+                      transform:       `translate(-50%, -50%) translateY(${-e * ELEV_STEP}px)`,
+                      width:           `${tileW}px`,
+                      height:          `${TILE_H}px`,
+                      backgroundColor: ACCENT,
+                      clipPath:        DIAMOND,
+                    }}
+                  />
+                ))}
               </div>
 
               {/* Level label — left-aligned at a fixed x, never wraps */}
