@@ -150,17 +150,21 @@ export default async function ZonePage({ params }) {
         {/* Hypercastle location */}
         <div className="mb-10">
           <p className="text-xs dim-40 mb-3">hypercastle location</p>
-          {zone.hypercastle?.length > 0 ? (
-            zone.hypercastle.map((loc, i) => (
+          {(() => {
+            if (!zone.hypercastle?.length) return <p className="text-sm dim-40">unknown</p>;
+            const allSpan = zone.hypercastle.every(loc => loc.elevation === undefined);
+            if (allSpan && zone.hypercastle.length > 1) {
+              const levels = zone.hypercastle.map(loc => loc.level);
+              return <p className="text-sm dim-80 mb-1">levels {Math.min(...levels)} - {Math.max(...levels)} · all elevations</p>;
+            }
+            return zone.hypercastle.map((loc, i) => (
               <p key={i} className="text-sm dim-80 mb-1">
                 {loc.elevation !== undefined
                   ? `level ${loc.level} · elevation ${loc.elevation > 0 ? '+' : ''}${loc.elevation}`
                   : `level ${loc.level} · all elevations`}
               </p>
-            ))
-          ) : (
-            <p className="text-sm dim-40">unknown</p>
-          )}
+            ));
+          })()}
         </div>
 
         {/* Parcel + reference image side by side */}
