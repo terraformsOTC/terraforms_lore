@@ -5,8 +5,25 @@
 //   'quote' — a direct quote, rendered between typographic quotation marks.
 //   'note'  — a pointer or paraphrase (e.g. a Discord reference), rendered plainly.
 // Optional `note` adds context shown beneath the line.
+//
+// A section may also carry `transcript: '<slug>'` — the slug of a full
+// transcript in src/data/transcripts/, surfaced as a click-through link.
 
 export const sections = [
+  {
+    label: 'private discussion · june 2024',
+    transcript: 'hivemind-june-2024',
+    items: [
+      { type: 'note', text: 'A long private conversation — recorded and transcribed in full below.' },
+    ],
+  },
+  {
+    label: 'net society · ep 21 · 2025',
+    transcript: 'net-society-ep21',
+    items: [
+      { type: 'quote', text: "The internet is the art city. It's not New York, it's not Basel, it's not Miami — it's the internet." },
+    ],
+  },
   {
     label: '24 dec 2025',
     items: [
@@ -36,6 +53,7 @@ export const sections = [
   },
   {
     label: 'twitter spaces · may 2026',
+    transcript: 'twitter-spaces-may-2026',
     items: [
       { type: 'quote', text: 'Artist is, like, a really scorched territory because of the civilisational incompetence.' },
       { type: 'quote', text: 'The thoughts that you think when media is cheap or fast or small are different' },

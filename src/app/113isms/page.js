@@ -23,9 +23,18 @@ export default function OneThirteenismsPage() {
         <div style={{ maxWidth: '720px' }}>
           {sections.map((section) => (
             <section key={section.label} className="mb-12">
-              <h2 className="text-xs mb-5 dim-50" style={{ letterSpacing: '0.04em' }}>
+              <h2 className="text-xs mb-2 dim-50" style={{ letterSpacing: '0.04em' }}>
                 {section.label}
               </h2>
+              {section.transcript && (
+                <a
+                  href={`/113isms/transcripts/${section.transcript}`}
+                  className="inline-block text-xs mb-5 dim-65"
+                  style={{ textDecoration: 'underline', textUnderlineOffset: '2px' }}
+                >
+                  read the full transcript &rarr;
+                </a>
+              )}
               <ul className="flex flex-col">
                 {section.items.map((item, i) =>
                   item.type === 'quote' ? (
