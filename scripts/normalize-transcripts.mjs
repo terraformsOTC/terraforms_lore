@@ -211,6 +211,25 @@ function parseHivemind(raw) {
   return mergeTurns([{ speaker: null, paras }]);
 }
 
+// The auto-transcriber hears 113 ("one one three") as a spoken number when the
+// hosts address him by name, and renders it inconsistently. Normalise those
+// address forms back to "113". Scoped to this transcript: in context every
+// "one('one')? three" / "one two and three" here is the hosts naming 113.
+const NET_FIXUPS = [
+  [/\bone,?\s+two\s+and\s+three\b/gi, '113'],
+  [/\bone,?\s+one,?\s+three\b/gi, '113'],
+  [/\bone,?\s+three\b/gi, '113'],
+];
+
+function applyFixups(turns, fixups) {
+  for (const turn of turns) {
+    turn.paras = turn.paras.map((p) =>
+      fixups.reduce((acc, [re, to]) => acc.replace(re, to), p)
+    );
+  }
+  return turns;
+}
+
 function parseNetSociety(raw) {
   const lines = raw.split('\n');
   const tsRe = /^\d{2};\d{2};\d{2};\d{2}\s*-\s*\d{2};\d{2};\d{2};\d{2}/;
@@ -239,7 +258,7 @@ function parseNetSociety(raw) {
     const para = clean(buf.join(' '));
     if (para) turns.push({ speaker, paras: [para] });
   }
-  return mergeTurns(turns);
+  return applyFixups(mergeTurns(turns), NET_FIXUPS);
 }
 
 function parseMay2026(raw) {
