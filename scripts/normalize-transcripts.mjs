@@ -314,7 +314,8 @@ const transcripts = [
     source: { label: 'Net Society · Ep 21', url: 'https://share.transistor.fm/s/4cdc9190' },
     blurb:
       '113 joins Aaron, Chris and Pri to talk Ethereum as a cultural settlement layer, ' +
-      'art vs. product, the Imperium and the Dominion, and treating a medium with dignity.',
+      'art vs. product, the Imperium and the Dominion, and treating computation as an ' +
+      'artistic medium with dignity.',
     turns: parseNetSociety(fs.readFileSync(SRC.netSociety, 'utf8')),
   },
   {

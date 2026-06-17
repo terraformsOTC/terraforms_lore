@@ -8,7 +8,7 @@
     "label": "Net Society · Ep 21",
     "url": "https://share.transistor.fm/s/4cdc9190"
   },
-  "blurb": "113 joins Aaron, Chris and Pri to talk Ethereum as a cultural settlement layer, art vs. product, the Imperium and the Dominion, and treating a medium with dignity.",
+  "blurb": "113 joins Aaron, Chris and Pri to talk Ethereum as a cultural settlement layer, art vs. product, the Imperium and the Dominion, and treating computation as an artistic medium with dignity.",
   "turns": [
     {
       "speaker": "Aaron",
@@ -26,8 +26,42 @@
     {
       "speaker": "Aaron",
       "paras": [
-        "I don't, but it seems like we may be excited to have 113 here today to talk about the Habsburg Empire and a whole bunch of different things. The future of art. I was excited 113 to see the Ethereum Foundation finally highlight some of the great creators and artists in the space, and I was glad that some of your work got a shout out.",
+        "---",
+        "created: 2026-06-14",
+        "status: active",
+        "type: Note",
+        "tags:",
+        "- 113d",
+        "- Terraforms",
+        "- terraformsotc",
+        "---",
+        "### Related",
+        "---",
+        "NET Society Episode 21",
+        "https://share.transistor.fm/s/4cdc9190",
+        "## TRANSCRIPT",
+        "I guess we're all living in the shadow of the Habsburg Empire."
+      ]
+    },
+    {
+      "speaker": "Chris",
+      "paras": [
+        "Wasn't that obvious?",
+        "Don't you feel the Hapsburgs looming over you every day?"
+      ]
+    },
+    {
+      "speaker": "Aaron",
+      "paras": [
+        "I don't, but it seems like we may be.",
+        "Excited to have 113 here today to talk about the Habsburg Empire and a whole bunch of different things... The future of art. I was excited 113 to see the Ethereum Foundation finally highlight some of the great creators and artists in the space, and I was glad that some of your work got a shout out.",
         "I don't know if you caught that yesterday, but I did. That was great. I thought that was amazing, that we're finally able to talk about it."
+      ]
+    },
+    {
+      "speaker": "Pri",
+      "paras": [
+        "About time."
       ]
     },
     {
@@ -39,20 +73,18 @@
     {
       "speaker": "Aaron",
       "paras": [
-        "Yeah, completely. And I think it's odd because that really is the ecosystem's strength. Right. And I do I still have the firm belief that when we zoom out, you know, five, ten years, there's going to be much, more usefulness for Ethereum when it comes to art, culture and media and the financialization of it, in part, rather than like all these financial primitives, I think folks are going to get a lot more excited about those aspects as opposed to, you know, the next great lending platform or whatnot."
+        "Yeah, completely. And I think it's odd because that really is the ecosystem's strength, right? And I still have the firm belief that when we zoom out, you know, five, ten years, there's going to be much, more usefulness for Ethereum when it comes to art, culture, and media and the financialization of it, in part, rather than like all these financial primitives. I think folks are going to get a lot more excited about those aspects as opposed to, you know, the next great lending platform or whatnot."
       ]
     },
     {
       "speaker": "113",
       "paras": [
-        "Yeah, I have 2 or 3 responses to that. One is, as a trader, like so many people know, I just can't live in meme coins. You know, I've tried and dabbled but you know, NFTs and things like art. It's not a zero sum game. Right. Like I actually want to own and collect a lot of NFTs.",
-        "And then NFT culture kind of capsized into meme coins and it became this, PVP, like uh, zero sum flipping game for a lot of the culture evolved there. And I just always thought that was so tragic because it's like, okay, you have a network native network or a native to the like, Ethereum network itself, artifact that people actually want as an and when I buy Pokemon cards, I'm pure exit liquidity.",
-        "I buy them because I love the art. I love having physical object. I want to own it. And so, you know, there's a lot of NFT as I collected that I, you know, I never in my life would expect that I would sell them if they'd be a financial instrument or something like that. Right. And so then to watching that culture kind of, I don't know, it's kind of gone underground a bit.",
-        "But yeah, I think that's really. Yeah. Under appreciated. The other thing is I said, you know, I mean self bias. But you know, I think collections like Autoglass, I think Terraform, it's this criteria. I think he's turned Ethereum into Bitcoin and people didn't really notice this. Like I think as a result of collections like that, Ethereum is going to effectively run forever.",
-        "It might in worst case scenario, it's running in the basement of some museum or something, right? Like so. I think those internalized Ethereum, and I don't think that organization has really understood that. And then the last thing is, I do actually think their roadmap and the other direction, their roadmap is something that artists have paid like effectively zero attention to, which is the tools of scaling, like the raw materials that, you know, you could call it L2 right now, but that's a very early term to describe the art supplies that, the kind of patterns that have evolved recently and in my mind, and I've been here for 11 years and in my",
-        "Mind, because Bitcoin, Ethereum and I've been calling it something like a third era, and this third era would be it's a, mouthful, but it's something like arbitrary computer program artworks. You know, that can kind of like float and treat aetherium like a cultural settlement layer, but with a real crypto economic link as a result of these patterns.",
-        "So it's like crypto economic programs that sell to Ethereum that are artworks. And what that makes is something that I've wanted for, you know, when Ethereum comes out and I read the web page and it says World Computer, I don't take it seriously because I'm like, the computer is not very powerful, like I can only do. It's a Gameboy in my mind later, not even.",
-        "Right. And I'm making much more advanced programs. And so I'm like, oh, what kind of world computer is this? I can't do my work on it. And then I didn't embrace the constraint ness of it at the time, which was a mistake, but the constraints of almost lifted like intimidatingly so, or like they're listed to such a degree and artists can't think these sorts yet, basically.",
+        "Yeah, I have 2 or 3 responses to that. One is, as a trader, like so many people know, I can't live in meme coins. I've tried and dabbled but you know, NFTs and things like art, it's not a zero sum game... Like I actually want to own and collect a lot of NFTs.",
+        "And then NFT culture kind of capsized into meme coins and it became this, PVP, zero sum flipping game for a lot of the culture that evolved there. And I just always thought that was so tragic because it's like, okay, you have a... native to the Ethereum network itself artifact that people actually want. As in, when I buy Pokemon cards, I'm pure exit liquidity. I buy them because I love the art. I love having physical object. I want to own it. And so, you know, there's a lot of NFT as I collected that I, you know, I never in my life would expect that I would sell them if they'd be a financial instrument or something like that. Right. And so then to watching that culture kind of, I don't know, it's kind of gone underground a bit.",
+        "But yeah, I think that's really under appreciated. The other thing is I said, you know, I mean self-bias, but I think collections like Autoglyphs, I think Terraforms fits this criteria, I think these turned Ethereum into Bitcoin. And people didn't really notice this. Like I think as a result of collections like that, Ethereum is going to effectively run forever.",
+        "Worst case scenario, it's running in the basement of some museum or something, right? I think those eternalised Ethereum, and I don't think that organization (the Ethereum Foundation) has really understood that. And then the last thing is, in the other direction, their roadmap is something that artists have paid like effectively zero attention to, which is the tools of scaling, like the raw materials, you could call it L2s right now, but that's a very early term to describe the art supplies. The kind of patterns that have evolved recently, and in my mind, and I've been here for 11 years... in my mind, it goes Bitcoin, Ethereum, and I've been calling it something like a \"Third Era\", and this Third Era would be... it's a mouthful, but it's something like \"arbitrary computer program artworks\". You know, that can kind of like float and treat Ethereum like a cultural settlement layer, but with a real crypto-economic link as a result of these patterns.",
+        "So it's like crypto economic programs that settle to Ethereum that are artworks. And what that makes is something that I've wanted for, you know, when Ethereum comes out and I read the web page and it says \"World Computer\", I don't take it seriously because I'm like, the computer is not very powerful. It's a Gameboy in my mind, not even.",
+        "And I'm making much more advanced programs. And so I'm like, oh, what kind of world computer is this? I can't do my work on it. And then I didn't embrace the constraint ness of it at the time, which was a mistake, but the constraints of almost lifted like intimidatingly so, or like they're listed to such a degree and artists can't think these sorts yet, basically.",
         "And what I think is then computing art has a market now, like as a result of this kind of the 2021 and on NFT boom, which I think is this kind of just like inception in the imagination of people, that you could have a kind of market that's, you know, for a digital artifact or digital artworks or things like this, but that the current state of it, the paradigm that it exists in trading mostly existing media forms and not really interrogating, like the idea of a crypto economic program, which is what the substrate is.",
         "You know, I think that's a very early culture in it. And I think the horizons of artists who can make crypto economic programs as artworks, you suddenly can just root around everything. You know, I I'll shut up in about 30s. I just I didn't have a place in the art world. Told me, just wait 80 years, you know, just wait in line.",
         "And when you're dead in 80 years will give you your morsels of acknowledgment. You know, I watched the net artists, the post-internet artists, etc. Not really get, you know, like they're still doing adjunct work and they're still like they're in a, oh, you're in a gallery. Cool. But you make like, I don't know, $10,000 a quarter from your gallery, like, if you're a superstar, if you're a quote unquote superstar as a quote unquote digital artist, right.",
