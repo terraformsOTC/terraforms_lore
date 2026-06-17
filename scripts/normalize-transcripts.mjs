@@ -221,6 +221,21 @@ const NET_FIXUPS = [
   [/\bone,?\s+three\b/gi, '113'],
 ];
 
+// The source auto-transcript starts mid-exchange (the open was clipped). This
+// is the missing intro, supplied by the author from the original recording:
+// Aaron sets up the running "Habsburg" bit, Chris retorts and turns it on him,
+// and Aaron's reply ("I don't…") is where the source transcript picks up.
+const NET_INTRO = [
+  { speaker: 'Aaron', paras: ["I guess we're all living in the shadow of the Habsburg Empire."] },
+  {
+    speaker: 'Chris',
+    paras: [
+      "Wasn't that obvious?",
+      "So don't you feel the Hapsburg is looming over you every day?",
+    ],
+  },
+];
+
 function applyFixups(turns, fixups) {
   for (const turn of turns) {
     turn.paras = turn.paras.map((p) =>
@@ -230,35 +245,28 @@ function applyFixups(turns, fixups) {
   return turns;
 }
 
+// The Net Society source is a hand-cleaned markdown transcript: a bare speaker
+// name on its own line (Aaron / Chris / Pri / Derek / 113) marks a turn change,
+// blank-line-separated paragraphs follow, and the opening block (before any
+// label) is the host, Aaron. It is already cleaned, so paragraphs are taken
+// verbatim (trimmed) rather than re-run through the polish pipeline.
 function parseNetSociety(raw) {
   const lines = raw.split('\n');
-  const tsRe = /^\d{2};\d{2};\d{2};\d{2}\s*-\s*\d{2};\d{2};\d{2};\d{2}/;
-  const nameRe = /^(Aaron|Chris|Pri|Derek)\s*$/;
+  const labelRe = /^(Aaron|Chris|Pri|Derek|113)\s*$/;
+  const titleIdx = lines.findIndex((l) => /^#\s/.test(l));
+  const start = titleIdx === -1 ? 0 : titleIdx + 1;
   const turns = [];
-  let i = 0;
-  // Skip preamble until the first timestamp.
-  while (i < lines.length && !tsRe.test(lines[i])) i++;
-  while (i < lines.length) {
-    if (!tsRe.test(lines[i])) {
-      i++;
+  let speaker = 'Aaron'; // the opening block is the host
+  for (let i = start; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (labelRe.test(line)) {
+      speaker = line;
       continue;
     }
-    i++; // consume timestamp line
-    let speaker = '113';
-    if (i < lines.length && nameRe.test(lines[i].trim())) {
-      speaker = lines[i].trim();
-      i++;
-    }
-    // gather text lines until a blank line
-    const buf = [];
-    while (i < lines.length && lines[i].trim() !== '' && !tsRe.test(lines[i])) {
-      buf.push(lines[i].trim());
-      i++;
-    }
-    const para = clean(buf.join(' '));
-    if (para) turns.push({ speaker, paras: [para] });
+    if (line === '') continue;
+    turns.push({ speaker, paras: [line] });
   }
-  return applyFixups(mergeTurns(turns), NET_FIXUPS);
+  return applyFixups(mergeTurns([...NET_INTRO, ...turns]), NET_FIXUPS);
 }
 
 function parseMay2026(raw) {

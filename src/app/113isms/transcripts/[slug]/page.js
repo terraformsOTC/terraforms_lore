@@ -52,7 +52,7 @@ export default async function TranscriptPage({ params }) {
                 className="dim-100"
                 style={{ textDecoration: 'underline', textUnderlineOffset: '2px' }}
               >
-                {t.source.label} &nearr;
+                {t.source.label}
               </a>
             </p>
           )}
