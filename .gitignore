@@ -18,3 +18,7 @@ submissions.json
 
 # OS
 .DS_Store
+
+# Syncthing machine-local files (not synced between devices)
+.stfolder/
+.stignore
