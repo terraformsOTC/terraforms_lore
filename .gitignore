@@ -22,3 +22,6 @@ submissions.json
 # Syncthing machine-local files (not synced between devices)
 .stfolder/
 .stignore
+
+# Claude Code per-machine permission allowlist (local only)
+.claude/settings.local.json

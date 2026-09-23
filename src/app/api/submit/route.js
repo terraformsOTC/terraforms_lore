@@ -97,8 +97,13 @@ export async function POST(request) {
       return NextResponse.json({ error: 'request too large' }, { status: 413 });
     }
 
-    const body = JSON.parse(raw);
-    const { type, zone, reference, explanation, sourceLink, handle } = body;
+    let body;
+    try {
+      body = JSON.parse(raw);
+    } catch {
+      return NextResponse.json({ error: 'invalid JSON' }, { status: 400 });
+    }
+    const { type, zone, reference, explanation, sourceLink, handle } = body ?? {};
 
     if (!zone || !reference || !explanation) {
       return NextResponse.json({ error: 'missing required fields' }, { status: 400 });
