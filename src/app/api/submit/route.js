@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { getKv } from '@/lib/kv';
 
 // Use Vercel KV in production; fall back to local JSON file in dev
 const IS_PROD = !!process.env.KV_REST_API_URL;
@@ -42,12 +43,6 @@ const ALLOWED_ORIGINS = [
   'https://www.terraformlore.xyz',
   'https://terraform-lore.vercel.app',
 ];
-
-// Lazy-import so the module doesn't crash locally where KV env vars aren't set
-async function getKv() {
-  const { kv } = await import('@vercel/kv');
-  return kv;
-}
 
 // Local dev fallback - write to submissions.json
 async function saveLocally(entry) {
