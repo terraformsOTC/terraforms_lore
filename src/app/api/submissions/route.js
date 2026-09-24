@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import { timingSafeEqual } from 'node:crypto';
-import { getKv } from '@/lib/kv';
 
 const IS_PROD = !!process.env.KV_REST_API_URL;
 
@@ -46,7 +45,7 @@ export async function GET(request) {
     'unknown';
 
   if (IS_PROD) {
-    const kv = await getKv();
+    const { kv } = await import('@vercel/kv');
     if (await isRateLimitedKv(ip, kv)) {
       return NextResponse.json({ error: 'too many requests' }, { status: 429 });
     }
@@ -75,7 +74,7 @@ export async function GET(request) {
 
   try {
     if (IS_PROD) {
-      const kv = await getKv();
+      const { kv } = await import('@vercel/kv');
       // llen + lrange are O(1) and O(N) respectively where N = page size.
       const [total, raw] = await Promise.all([
         kv.llen('submissions'),
