@@ -900,7 +900,7 @@ export const zones = [
     palette: ['#87e899', '#e2efed', '#edf6f7', '#ac7167', '#e93e5b', '#4c26c6', '#ff63e9', '#fefe82', '#4dcb7e', '#252525'],
     suggestion: "C-MOULD microbial art collection",
     description:
-      "Claude suggestion: C-MOULD, curated by the late Simon Park (1964-2021) at the University of Surrey, is the world's largest collection of pigmented bacteria and fungi for use in art (50+ species). The palette maps closely to real microbial pigments: Vogesella indigofera (blue / purple), Serratia marcescens (red / magenta), Chromobacterium violaceum (purple), Pseudomonas (greens), Kocuria (yellow). Reads as a Petri-dish painting.",
+      "Claude suggestion: C-MOULD, curated by the late Simon Park (1964-2021) at the University of Surrey, is the world's largest collection of pigmented bacteria and fungi for use in art (50+ species). The palette maps closely to real microbial pigments: Vogesella indigofera (blue / purple), Serratia marcescens (red / magenta), Chromobacterium violaceum (purple), Pseudomonas (greens), Kocuria (yellow). Reads as a Petri-dish painting.\n\nA second, less certain possibility is [Mould Map](https://www.mouldmap.com/), a narrative art anthology edited by Hugh Frost and Leomi Sadler, published in six editions between 2010 and 2017. Its sixth, [TERRAFORMERS](https://mouldmap.tumblr.com/post/152560518096/mould-map-6-terraformers-exhibition-view), gathered 76 artists whose work dealt with world-making. The name overlap is suggestive, but no link to Terraforms has been confirmed.",
     images: { zone: null, reference: '/images/Mould-reference.jpeg' },
   },
   {
