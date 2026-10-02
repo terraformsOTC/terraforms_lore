@@ -19,6 +19,18 @@ export default function StatusBadge({ status, category, twin, set, className = '
     </span>
   ) : null;
 
+  if (status === 'unknown') {
+    return (
+      <div className="flex gap-1 flex-wrap justify-end">
+        {setBadge}
+        {twinBadge}
+        <span className={`text-xs px-1 shrink-0 dim-40 ${className}`} style={{ border: '1px solid var(--border-dim)' }}>
+          unidentified
+        </span>
+      </div>
+    );
+  }
+
   if (status === 'llm') {
     return (
       <div className="flex gap-1 flex-wrap justify-end">

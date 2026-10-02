@@ -96,7 +96,7 @@ export default function Home() {
         <div className="grid-border" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))' }}>
           {filtered.map((zone) => (
             <ItemCard key={zone.id} item={zone} href={`/zones/${zone.id}`}
-              category={CATEGORIES[zone.category]} palette={zone.palette} />
+              category={CATEGORIES[zone.category]} palette={zone.palette} linkUnknown />
           ))}
         </div>
 

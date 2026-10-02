@@ -5,7 +5,6 @@ const BASE = 'https://terraformlore.xyz';
 
 export default function sitemap() {
   const zoneUrls = zones
-    .filter((z) => z.status !== 'unknown')
     .map((z) => ({
       url: `${BASE}/zones/${z.id}`,
       lastModified: new Date(),

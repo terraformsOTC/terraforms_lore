@@ -10,10 +10,12 @@ import StatusBadge from './StatusBadge';
  *   category  - resolved category object { label, color } or null
  *   subtitle  - optional secondary text next to the name (e.g. biome nickname)
  *   palette   - optional hex array to render as a color swatch bar
+ *   linkUnknown - link an unidentified item to its page (zones have one;
+ *                 unknown biomes do not)
  */
-export default function ItemCard({ item, href, category, subtitle, palette, set }) {
+export default function ItemCard({ item, href, category, subtitle, palette, set, linkUnknown = false }) {
   if (item.status === 'unknown') {
-    return (
+    const card = (
       <div className="card-border p-4 flex items-center justify-between">
         <div>
           <span className="text-sm dim-40">{item.name}</span>
@@ -34,6 +36,9 @@ export default function ItemCard({ item, href, category, subtitle, palette, set 
         </div>
       </div>
     );
+    return linkUnknown
+      ? <Link href={href} className="block" style={{ textDecoration: 'none', color: 'inherit' }}>{card}</Link>
+      : card;
   }
 
   const ref = item.suggestion || item.guess || item.reference;

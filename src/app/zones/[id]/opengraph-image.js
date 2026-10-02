@@ -7,7 +7,7 @@ export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
 export function generateStaticParams() {
-  return zones.filter((z) => z.status !== 'unknown').map((z) => ({ id: z.id }));
+  return zones.map((z) => ({ id: z.id }));
 }
 
 export default async function Image({ params }) {
@@ -17,7 +17,7 @@ export default async function Image({ params }) {
 
   const fontData = readFileSync(join(process.cwd(), 'public/fonts/SpaceMono-Regular.ttf'));
 
-  const ref = zone.reference ?? zone.guess ?? zone.suggestion ?? '';
+  const ref = zone.status === 'unknown' ? 'reference unknown' : zone.reference ?? zone.guess ?? zone.suggestion ?? '';
   const palette = zone.palette ?? [];
 
   return new ImageResponse(

@@ -35,8 +35,12 @@ function renderWithLinks(text) {
   return out;
 }
 
+// Zones with no known reference get a page too, so every zone can be linked
+// to (the estimator links each parcel's zone here).
+const UNKNOWN_DESCRIPTION = 'We do not yet know what this zone references.';
+
 export async function generateStaticParams() {
-  return zones.filter((z) => z.status !== 'unknown').map((z) => ({ id: z.id }));
+  return zones.map((z) => ({ id: z.id }));
 }
 
 // Extract first 1–2 complete sentences, never cutting mid-sentence
@@ -57,8 +61,8 @@ export async function generateMetadata({ params }) {
   const title = `${zone.name} - terraform lore`;
   const ref = zone.reference ?? zone.guess ?? zone.suggestion ?? '';
 
-  const description = firstSentences(zone.description);
-  const ogDescription = ref ? `${zone.name}: ${ref}. ${firstSentences(zone.description, 160)}` : description;
+  const description = zone.status === 'unknown' ? UNKNOWN_DESCRIPTION : firstSentences(zone.description);
+  const ogDescription = ref && zone.status !== 'unknown' ? `${zone.name}: ${ref}. ${firstSentences(zone.description, 160)}` : description;
   // OG image is handled by opengraph-image.js (palette swatches + zone name)
   return {
     title,
@@ -85,11 +89,13 @@ export async function generateMetadata({ params }) {
 export default async function ZonePage({ params }) {
   const { id } = await params;
   const zone = zones.find((z) => z.id === id);
-  if (!zone || zone.status === 'unknown') notFound();
+  if (!zone) notFound();
 
+  const isUnknown = zone.status === 'unknown';
   const isTheory = zone.status === 'uncertain' || zone.status === 'llm';
   const cat = CATEGORIES[zone.category];
-  const ref = zone.suggestion || zone.guess || zone.reference;
+  const ref = isUnknown ? 'unknown' : zone.suggestion || zone.guess || zone.reference;
+  const description = isUnknown ? UNKNOWN_DESCRIPTION : zone.description;
   const parcelIds = ZONE_PARCEL_IDS[id] || null;
   const hasReference = zone.images?.reference;
 
@@ -97,7 +103,7 @@ export default async function ZonePage({ params }) {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: `${zone.name} - ${ref}`,
-    description: zone.description?.slice(0, 200) ?? '',
+    description: description?.slice(0, 200) ?? '',
     url: `https://terraformlore.xyz/zones/${id}`,
     isPartOf: { '@type': 'WebSite', name: 'terraform lore', url: 'https://terraformlore.xyz' },
     about: { '@type': 'Thing', name: zone.name },
@@ -149,8 +155,8 @@ export default async function ZonePage({ params }) {
         <hr style={{ border: 'none', borderTop: '1px solid rgba(232,232,232,0.12)', marginBottom: '24px' }} />
 
         <p className="text-sm dim-55 mb-4">mathcastles reference</p>
-        <p className="text-sm mb-8" style={{ opacity: isTheory ? 0.65 : 0.85 }}>{ref}</p>
-        <p className="text-sm mb-10 dim-80" style={{ lineHeight: '1.8', whiteSpace: 'pre-line' }}>{renderWithLinks(zone.description)}</p>
+        <p className="text-sm mb-8" style={{ opacity: isTheory || isUnknown ? 0.65 : 0.85 }}>{ref}</p>
+        <p className="text-sm mb-10 dim-80" style={{ lineHeight: '1.8', whiteSpace: 'pre-line' }}>{renderWithLinks(description)}</p>
 
         {/* Hypercastle position — mobile only (desktop shows the visual map) */}
         {zone.hypercastle?.length > 0 && (
