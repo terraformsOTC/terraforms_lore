@@ -4,7 +4,6 @@ import { useState, useMemo } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ItemCard from '@/components/ItemCard';
-import SubmitForm from '@/components/SubmitForm';
 import { zones, confirmedZones, uncertainZones, llmZones, unknownZones, CATEGORIES } from '@/data/zones';
 
 const FILTERS = [
@@ -102,8 +101,6 @@ export default function Home() {
 
         {filtered.length === 0 && <p className="text-sm mt-8 dim-40">no results. try adjusting filters or search.</p>}
 
-        <div className="mt-20 divider" />
-        <SubmitForm type="zone" />
       </main>
       <Footer />
     </div>

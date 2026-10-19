@@ -4,7 +4,6 @@ import { useState, useMemo } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ItemCard from '@/components/ItemCard';
-import SubmitForm from '@/components/SubmitForm';
 import { biomes, confirmedBiomes, uncertainBiomes, unknownBiomes, BIOME_CATEGORIES, BIOME_SETS } from '@/data/biomes';
 
 const FILTERS = [
@@ -69,8 +68,6 @@ export default function BiomesPage() {
 
         {filtered.length === 0 && <p className="text-sm mt-8 dim-40">no results. try adjusting filters or search.</p>}
 
-        <div className="mt-20 divider" />
-        <SubmitForm type="biome" />
       </main>
       <Footer />
     </div>
