@@ -32,7 +32,7 @@ export const zones = [
     description:
       "The Alto zone references the highly influential early PC developed at Xerox PARC. The Alto pioneered many aspects of modern computing we take for granted today, including the graphical user interface (GUI), computer mouse, and Ethernet networking. Whilst the Alto itself was not a commercial success, it influenced many in Silicon Valley at the time. This included Steve Jobs, who after vising PARC in 1979 integrated many of the Alto's ideas into the Lisa and Macintosh systems.",
     referenceLink: 'https://en.wikipedia.org/wiki/Xerox_Alto',
-    images: { zone: null, reference: '/images/alto-reference.jpg' },
+    images: { zone: null, reference: '/images/alto-reference.webp' },
   },
 
   // — music —
@@ -48,7 +48,7 @@ export const zones = [
     description:
       "The red, blue, white, and black palette is a direct reference to Radiohead's Kid A album art. The fourth studio album by the English rock band, it is recognised today as one of the greatest albums of all time, and a defining cultural touchstone of the 2000's.",
     sourceUrl: 'https://x.com/TerraformsOTC/status/1954986097617871261',
-    images: { zone: '/images/hypermage-zone.jpg', reference: '/images/hypermage-reference.jpg' },
+    images: { zone: '/images/hypermage-zone.webp', reference: '/images/hypermage-reference.webp' },
   },
   {
     id: 'soon',
@@ -61,7 +61,7 @@ export const zones = [
     referenceDetail: "Track from Loveless (1991)",
     description:
       "[SOON] is a reference to \"Soon\" by My Bloody Valentine - the closing track of their landmark 1991 album Loveless. The gauzy pinks echo the hazy, distorted beauty of shoegaze.",
-    images: { zone: null, reference: '/images/soon-reference.png' },
+    images: { zone: null, reference: '/images/soon-reference.webp' },
   },
 
   // — card game —
@@ -91,7 +91,7 @@ export const zones = [
       "Shahra is the rarest zone, with only 10 parcels. It references Shahrazad - a sorcery card from Magic: The Gathering's Arabian Nights set (1993), illustrated by Kaja Foglio, itself referencing the legendary storyteller of One Thousand and One Nights. Shahrazad is notorious for its \"sub-game\" effect: when cast, both players pause the main game, shuffle their hands into their libraries, and play an entirely new game of Magic from scratch — the loser of that sub-game then loses half their remaining life total in the original game.",
     sourceUrl: 'https://x.com/TerraformsOTC/status/1954986097617871261',
     rarity: 'rarest - 10 parcels',
-    images: { zone: null, reference: '/images/shahra-reference.png' },
+    images: { zone: null, reference: '/images/shahra-reference.webp' },
   },
   {
     id: 'cradle',
@@ -104,7 +104,7 @@ export const zones = [
     referenceDetail: "Art by Mark Zug — Urza's Saga set (1998)",
     description:
       "Gaea's Cradle is among the most iconic cards in Magic: The Gathering, originating from the Urza's Saga set (1998), illustrated by Mark Zug. The card is named after Gaea — a recurring embodiment of nature and primal life within Magic's lore — and is notorious for its explosive green mana generation.",
-    images: { zone: null, reference: '/images/Cradle-reference.jpeg' },
+    images: { zone: null, reference: '/images/Cradle-reference.webp' },
   },
   {
     id: 'dread',
@@ -119,7 +119,7 @@ export const zones = [
       "The Dread zone references the Magic: The Gathering card Liliana, Dreadhorde General, with art by Yoshitaka Amano. The purple-black palette mirrors the card's dark, otherworldly aesthetic.",
     sourceUrl: 'https://x.com/TerraformsOTC/status/1954986097617871261',
     creditTo: '@neon_dao',
-    images: { zone: null, reference: '/images/dread-reference.jpg' },
+    images: { zone: null, reference: '/images/dread-reference.webp' },
   },
 
   // — crypto art —
@@ -136,7 +136,7 @@ export const zones = [
       "Nightrose is a reference to an artwork by David Rudnick, a UK-born, American-raised, self-taught graphic designer. Stem was sold in 2021 on the Zora platform to celebrate Valentine's day.",
     sourceUrl: 'https://x.com/TerraformsOTC/status/1954986097617871261',
     referenceLink: 'https://decrypt.co/57782/david-rudnick-nft',
-    images: { zone: '/images/nightrose-zone.jpg', reference: '/images/nightrose-reference.jpg' },
+    images: { zone: '/images/nightrose-zone.webp', reference: '/images/nightrose-reference.webp' },
   },
   {
     id: 'wastelands',
@@ -150,7 +150,7 @@ export const zones = [
     description:
       "A reference to GREMPLIN's well known [pfp series](https://www.cryptoadz.io/).",
     sourceUrl: 'https://x.com/TerraformsOTC/status/1954986097617871261',
-    images: { zone: '/images/wastelands-zone.jpg', reference: '/images/wastelands-reference.jpg' },
+    images: { zone: '/images/wastelands-zone.webp', reference: '/images/wastelands-reference.webp' },
   },
   {
     id: 'radiant',
@@ -178,7 +178,7 @@ export const zones = [
     description:
       "Few know that the Avidana zone is a direct reference to the \"Rad\" palette in @tylerxhobbs' Fidenza - the landmark long-form generative art release on Art Blocks.",
     sourceUrl: 'https://x.com/TerraformsOTC/status/1954986097617871261',
-    images: { zone: '/images/avidana-zone.jpg', reference: '/images/avidana-reference.jpg' },
+    images: { zone: '/images/avidana-zone.webp', reference: '/images/avidana-reference.webp' },
   },
   {
     id: 'aetherking',
@@ -208,7 +208,7 @@ export const zones = [
     description:
       "Some zone references are more literal. Everglades is inspired by the Everglades in Florida - one of the most distinctive natural landscapes in the US, known for its subtropical wetlands and diverse ecosystem.",
     sourceUrl: 'https://x.com/TerraformsOTC/status/1954986097617871261',
-    images: { zone: '/images/everglades-zone.jpg', reference: '/images/everglades-reference.jpg' },
+    images: { zone: '/images/everglades-zone.webp', reference: '/images/everglades-reference.webp' },
   },
   {
     id: 'jadeite',
@@ -221,7 +221,7 @@ export const zones = [
     referenceDetail: "Jadeite jade mineral",
     description:
       "This zone references a rare pyroxene mineral and one of the two types of jade, prized for its vivid green colour. The name is also associated with vintage jadeite glass kitchenware, which was produced in the early to mid-20th century.",
-    images: { zone: null, reference: '/images/jadeite-reference.jpg' },
+    images: { zone: null, reference: '/images/jadeite-reference.webp' },
   },
 
   // — video game —
@@ -282,7 +282,7 @@ export const zones = [
       "Killscreen references Ms. Pac-Man and a specific integer overflow glitch in the Pac-Man series. When Pac-Man reaches level 256, the counter overflows, corrupting half the screen - the infamous \"kill screen\".",
     sourceUrl: 'https://x.com/TerraformsOTC/status/1954986097617871261',
     referenceLink: 'https://pacman.fandom.com/wiki/Map_256_Glitch',
-    images: { zone: null, reference: '/images/killscreen-reference.png' },
+    images: { zone: null, reference: '/images/killscreen-reference.webp' },
   },
 
   // — anime / film —
@@ -298,7 +298,7 @@ export const zones = [
     description:
       "The Mecha zone references Neon Genesis Evangelion (新世紀エヴァンゲリオン), a Japanese anime television series produced by Gainax and Tatsunoko Production.",
     sourceUrl: 'https://x.com/TerraformsOTC/status/1954986097617871261',
-    images: { zone: null, reference: '/images/neongenesis-reference.jpeg' },
+    images: { zone: null, reference: '/images/neongenesis-reference.webp' },
   },
   {
     id: 'tetsu',
@@ -312,7 +312,7 @@ export const zones = [
     description:
       "In 1988, Akira was released. Often cited as one of the greatest films of all time, pivotal in cyberpunk and anime aesthetics. The main antagonist is named Tetsuo. The Tetsu zone pays homage to this character.",
     sourceUrl: 'https://x.com/TerraformsOTC/status/1954986097617871261',
-    images: { zone: '/images/tetsu-zone.jpg', reference: '/images/tetsu-reference.jpg' },
+    images: { zone: '/images/tetsu-zone.jpg', reference: '/images/tetsu-reference.webp' },
   },
   {
     id: 'uwo',
@@ -326,7 +326,7 @@ export const zones = [
     referenceDetail: "Re:Zero − Starting Life in Another World",
     description:
       "The Uwo zone is the dark mode of the Rem & Ram palette from Re:Zero − Starting Life in Another World. Its twin, Gemina, is the light mode.",
-    images: { zone: null, reference: '/images/Remandram-reference.png' },
+    images: { zone: null, reference: '/images/Remandram-reference.webp' },
   },
   {
     id: 'gemina',
@@ -340,7 +340,7 @@ export const zones = [
     referenceDetail: "Re:Zero − Starting Life in Another World (originally named Twinmade)",
     description:
       "Gemina (originally named Twinmade) is the light mode of the Rem & Ram palette from Re:Zero − Starting Life in Another World. Its twin, Uwo, is the dark mode.",
-    images: { zone: null, reference: '/images/Remandram-reference.png' },
+    images: { zone: null, reference: '/images/Remandram-reference.webp' },
   },
 
   // — architecture —
@@ -356,7 +356,7 @@ export const zones = [
     description:
       "[HYCA] stands for HYperCAstle. This self-referential zone palette refers to the 3D aggregate structure that emerges when the entire Terraforms work is rendered as a single object in cyberspace.",
     sourceUrl: 'https://x.com/TerraformsOTC/status/1954986097617871261',
-    images: { zone: null, reference: '/images/Hypercastle-reference.png' },
+    images: { zone: null, reference: '/images/Hypercastle-reference.webp' },
   },
 
   // — print media —
@@ -372,7 +372,7 @@ export const zones = [
     description:
       "Riso zone references Risograph printing - a brand of digital duplicators manufactured by the Riso Kagaku Corporation, released in Japan in 1980. Designed for high-volume photocopying, it became beloved by zine and comic artists for its vivid, layered ink printing.",
     creditTo: '@neon_dao',
-    images: { zone: null, reference: '/images/riso-reference.jpg' },
+    images: { zone: null, reference: '/images/riso-reference.webp' },
   },
 
   // ─── UNCERTAIN — higher confidence ─────────────────────────────────────
@@ -402,7 +402,7 @@ export const zones = [
     suggestion: "Warp Records",
     description:
       "Claude suggestion: Warp Records is a British independent record label founded in Sheffield in 1989 by Steve Beckett, Robert Mitchell and Robert Gordon. It specialises in electronic, indie rock and experimental music, and has released records by acts including Aphex Twin, Autechre, Boards of Canada, Squarepusher, and Brian Eno.",
-    images: { zone: null, reference: '/images/warprecords-reference.jpg' },
+    images: { zone: null, reference: '/images/warprecords-reference.webp' },
   },
 
   // — card game —
@@ -416,7 +416,7 @@ export const zones = [
     suggestion: "Pokémon TCG holographic foil",
     description:
       "Claude suggestion: 'Holo' is TCG slang for the holographic foil treatment on rare Pokémon cards. The ten-colour saturated rainbow palette mirrors the kinetic chromatic shifts produced by the micro-etched diffraction grating used on holo cards as they catch the light.",
-    images: { zone: null, reference: '/images/Holo-reference.jpg' },
+    images: { zone: null, reference: '/images/Holo-reference.webp' },
   },
 
   // — video game —
@@ -429,7 +429,7 @@ export const zones = [
     palette: ['#eb4034', '#eeeeee', '#202020'],
     guess: "BloodRayne, 2002?",
     description: "BloodRayne is a cult-classic action-adventure video game franchise originating in 2002, featuring a dhampir (half-human, half-vampire) protagonist named Rayne who hunts Nazis and supernatural threats.",
-    images: { zone: null, reference: '/images/Bloodrayne-reference.jpg' },
+    images: { zone: null, reference: '/images/Bloodrayne-reference.webp' },
   },
   {
     id: 'yuna',
@@ -453,7 +453,7 @@ export const zones = [
     suggestion: "Kairo, 2012",
     description:
       "Claude suggestion: The zone name matches Kairo, a 2012 indie exploration game by Richard Perrin set in brutalist architecture with Egyptian influences. The warm amber-to-dark gradient (#ffe596 → #313638) maps to the game's sunlit sandstone environments fading into shadow.\n\nThe name also resonates with Kairos - the ancient Greek concept of the \"right\" or \"opportune\" moment in time. Unlike Chronos (sequential, measured time), Kairos is qualitative: the appointed moment, the window that must be seized. As a fully on-chain artwork built to last 10,000 years, Terraforms is deeply concerned with time - and Kairo may quietly gesture at this philosophical thread running through the whole project.\n\nA separate possibility points to Cairo, the open-source 2D graphics library. In his 2013 MIT Media Lab lecture \"Media for Thinking the Unthinkable,\" Bret Victor references [Cairo](https://en.wikipedia.org/wiki/Cairo_%28graphics%29) while arguing for tools that let us reason visually and dynamically - a resonant lineage for a generative, fully on-chain artwork rendered entirely from code. The homophone (Cairo / Kairo) and the graphics-programming heritage make it a plausible alternate source for the zone's name.",
-    images: { zone: null, reference: '/images/kairo-reference.jpg' },
+    images: { zone: null, reference: '/images/kairo-reference.webp' },
     referencedBy: [
       {
         description: "d347h.eth writes that Terraforms is a profound philosophical artwork about time, human temporality and computational achievement - and that the onchain maximalism and decay lore is just a surface.",
@@ -477,7 +477,7 @@ export const zones = [
     suggestion: "Arc System Works - Guilty Gear Strive, 2021",
     description:
       "Claude suggestion: Arc System Works is the developer behind Guilty Gear Strive. The signature orange-red (#ec5526), amber (#f4ac12), cream (#f7f4e2), slate blue (#9ebbc1), and near-black (#1e1b1e) directly echo GGS's iconic visual identity - the game's UI, character select screen, and promotional art all use this exact colour system. 'Arc' is also the studio abbreviation used by fans.",
-    images: { zone: null, reference: '/images/guiltygear-reference.jpg' },
+    images: { zone: null, reference: '/images/guiltygear-reference.webp' },
   },
   {
     id: 'toad',
@@ -527,7 +527,7 @@ export const zones = [
     suggestion: "Aria the Animation, 2005",
     description:
       "Claude suggestion: 'Aria' is the exact title of the 2005 iyashikei anime set in Neo-Venezia, a recreation of Venice on Aqua - a terraformed Mars. The palette maps precisely to the show's visual identity: canal blues #93d1de and #718dbc match the lagoon and reflected sky; pink #f9a4cb matches the undine gondoliers' uniforms; cream #dad7cc matches Neo-Venezia's stone architecture; near-white #f8fefe matches gondola hulls; warm yellow #f6e518 and orange #ec7e15 match the signature Venetian sunset glow; deep #292726 matches evening shadow. The terraforming setting is also a direct thematic echo of Terraforms itself.",
-    images: { zone: null, reference: '/images/aria-reference.jpg' },
+    images: { zone: null, reference: '/images/aria-reference.webp' },
   },
 
   // ─── UNCERTAIN — other ──────────────────────────────────────────────────
@@ -543,7 +543,7 @@ export const zones = [
     referenceDetail: "Early 2000s anime / isekai genre",
     description:
       "We know this about the Blushing zone, it is a reference to a classic isekai anime work, which was released 2 decades before the well known Re:Zero anime series.\n\nClaude has identified Fushigi Yûgi (1995-1996) as the most plausible contender: it is an isekai work, released almost exactly 20 years before Re:Zero, with a visual identity heavily built around pinks, roses, and lilacs.\n\nGiven the uncertainty, there are other contenders:\n· Magic Knight Rayearth - 1994-1995\n· El-Hazard: The Wanderers - 1995-1996\n· The Vision of Escaflowne - 1996\n· Revolutionary Girl Utena - 1997\n· Now and Then, Here and There - 1999\n· Cardcaptor Sakura - 1998-2000\n· Haibane Renmei - 2002\n· The Twelve Kingdoms - 2002-2003\n· Texhnolyze - 2003",
-    images: { zone: null, reference: '/images/Fushigi-Yugi-reference.jpg' },
+    images: { zone: null, reference: '/images/Fushigi-Yugi-reference.webp' },
   },
   {
     id: 'grove',
@@ -621,7 +621,7 @@ export const zones = [
     palette: ['#ed1111', '#f8f7ff', '#0012b5', '#30e7ff'],
     guess: "Rocket Pop (ice lolly)?",
     description: "Possible reference to a Rocket Pop - the classic red/white/blue ice lolly. The tricolour palette supports this theory.",
-    images: { zone: null, reference: '/images/rocketpop-reference.jpg' },
+    images: { zone: null, reference: '/images/rocketpop-reference.webp' },
   },
 
   // ─── TWIN PALETTES ───────────────────────────────────────────────────────
@@ -719,7 +719,7 @@ export const zones = [
     suggestion: "Pastel QT palette by polyphrog (Lospec)",
     description:
       "Claude suggestion: 7 of 8 hex codes are an exact byte-for-byte match to the Pastel QT palette on Lospec by polyphrog, in the same order. The 8th colour (#32282b) extends the palette with a dark anchor.",
-    images: { zone: null, reference: '/images/pastel%20qt%20Palette-reference.png' },
+    images: { zone: null, reference: '/images/pastel%20qt%20Palette-reference.webp' },
     referencedBy: [
       {
         description: "Remnynt's upcoming generative art collection attributes colours as being inspired, in part, by First Earth.",
@@ -729,7 +729,7 @@ export const zones = [
           text: "this palette is a personal favorite\n\nit's a sort of snowball i've been rolling, an earlier version was in Proscenium (see my profile pic)\n\nit draws from a combination of things, including Japanese woodblock printing and the First Earth palette in Terraforms\n\niso\nday 3",
           author: 'remnynt',
           date: 'Jan 3, 2026',
-          image: '/images/remnynt-tweet-image.jpeg',
+          image: '/images/remnynt-tweet-image.webp',
         },
       },
     ],
@@ -769,7 +769,7 @@ export const zones = [
     suggestion: "GrafxKid's Oil 6 palette (Lospec)",
     description:
       "Claude suggestion: three hex values (#f2d3ab, #c69fa5, #8b6d9c) are byte-for-byte identical to GrafxKid's Oil 6 palette on Lospec, one of the most popular pixel art palettes with 62,000+ downloads. The remaining colours extend the palette with lavender pink, maroon, and black.",
-    images: { zone: null, reference: '/images/Oil%206%20Palette-reference.png' },
+    images: { zone: null, reference: '/images/Oil%206%20Palette-reference.webp' },
   },
   {
     id: 'mt-zuka',
@@ -793,7 +793,7 @@ export const zones = [
     suggestion: "Yves Klein - monochrome trinity (IKB + Monopink + white)",
     description:
       "Claude suggestion: 'Exduo' means 'from two' in Latin - Klein explored duality between the material and immaterial. The deep blue #0012b5 closely matches International Klein Blue (#002FA7), light pink #ffe6fe matches his Monopink works, and warm white #fff7f5 represents the canvas substrate. Klein's ex-voto at Saint Rita contained exactly these three pigments.",
-    images: { zone: null, reference: '/images/exduo-reference.jpg' },
+    images: { zone: null, reference: '/images/exduo-reference.webp' },
   },
   {
     id: 'pepo',
@@ -805,7 +805,7 @@ export const zones = [
     suggestion: "Pepo - botanical term for pumpkin / gourd berries (Cucurbitaceae)",
     description:
       "Claude suggestion: 'Pepo' is the exact botanical term for the berry type of Cucurbitaceae - pumpkins, gourds, watermelons, and squash. All 6 colours map directly: amber #d77c11 = pumpkin skin, stone grey #d3cac3 = dried gourd shell, forest greens #61785c and #3f5c39 = vine and foliage, warm brown #332a1d = soil, dark #303d2d = shadow. Follows the pattern of Everglades and Jadeite as a nature reference.",
-    images: { zone: null, reference: '/images/Cucurbita-reference.jpg' },
+    images: { zone: null, reference: '/images/Cucurbita-reference.webp' },
   },
   {
     id: 'sep',
@@ -817,7 +817,7 @@ export const zones = [
     suggestion: "Sepolia - Ethereum testnet",
     description:
       "Claude suggestion: [SEP] likely abbreviates Sepolia, Ethereum's primary testnet since Goerli's deprecation. The dark grey #303030 base (shared with [HYCA] and [HOME]) evokes developer tooling, while lavender purple #9f82ff aligns with Ethereum ecosystem branding. A self-referential nod from a fully on-chain Ethereum project to the network's testing infrastructure.\n\nThis zone may also be a reference to \"Eternal September\". Also known as \"the September that never ended\", it describes a period between 1993-1994 when Internet service providers began offering Usenet access more broadly.\n\nThe flood of new users overwhelmed the existing norms and culture of online forums at the time, and crippled their ability to self-moderate. Internet culture changed forever. Many Internet users from before this time recall with nostalgia an internet that was civil, intellectually stimulating, free of trolls, and generally a place that offered refuge from the problems of the \"real world\".\n\nWe are still living in Eternal September.",
-    images: { zone: null, reference: '/images/sepolia-reference.png' },
+    images: { zone: null, reference: '/images/sepolia-reference.webp' },
   },
   {
     id: 'linosim',
@@ -841,7 +841,7 @@ export const zones = [
     suggestion: "Aquilegia (columbine flower) - Ranunculaceae",
     description:
       "Claude suggestion: 'Akileaf' is a portmanteau of 'Aquilegia' (the botanical genus) + 'leaf'. Aquilegia (columbine) produces distinctive spurred flowers in purple, violet, blue, pink, and cream - the exact colour palette of this zone. The 9 colours map to: deep violet (#453687, #3c2b71) = dark petal base, cornflower blues (#4899c4, #095474) = blue varieties, mauve (#b771b9) = pink-purple hybrid, ice blues (#82c1c6, #96c7ce) = pale blue cultivars, pale cream (#f9fbd4) = white columbine, sage (#abe291) = leaf and stem. Follows the pattern of Everglades and Jadeite as a botanical/nature reference.",
-    images: { zone: null, reference: '/images/aquilegia-reference.jpeg' },
+    images: { zone: null, reference: '/images/aquilegia-reference.webp' },
   },
   {
     id: 'nov',
@@ -853,7 +853,7 @@ export const zones = [
     suggestion: "V for Vendetta - Guy Fawkes Night (November 5th)",
     description:
       "Claude suggestion: [NOV] almost certainly abbreviates November - specifically November 5th, Guy Fawkes Night. The two-colour palette is striking in its precision: deep charcoal (#303030) evokes the shadows and anonymity of V's world, while the single blood red (#ff4538) is the iconic colour of V for Vendetta's rose, cape lining, and propaganda imagery. 'Remember, remember, the fifth of November' - the name [NOV] is the bracket-notation hint.",
-    images: { zone: null, reference: '/images/vvendetta-reference.jpg' },
+    images: { zone: null, reference: '/images/vvendetta-reference.webp' },
   },
   {
     id: 'hyphae',
@@ -865,7 +865,7 @@ export const zones = [
     suggestion: "Nervous System - Hyphae",
     description:
       "Claude suggestion: Hyphae is a well-known generative algorithm by Nervous System studio (Jessica Rosenkrantz and Jesse Louis-Rosenberg, founded 2007), originally a leaf-vein / auxin-flux simulation rendered as 3D-printed lamps, jewellery, and sculpture. The minimal blue / orange / white palette is consistent with how Hyphae renders are typically presented.",
-    images: { zone: null, reference: '/images/Hyphae-reference.jpg' },
+    images: { zone: null, reference: '/images/Hyphae-reference.webp' },
   },
   {
     id: 'dark',
@@ -889,7 +889,7 @@ export const zones = [
     suggestion: "Blood, 1997",
     description:
       "Claude suggestion: Blood (1997), developed by Monolith Productions on the Build engine, is a cult horror FPS following Caleb's revenge against the demon Tchernobog. The minimal red-on-black palette matches the game's iconic logo and visual identity.",
-    images: { zone: null, reference: '/images/Blood-reference.jpg' },
+    images: { zone: null, reference: '/images/Blood-reference.webp' },
   },
   {
     id: 'mould',
@@ -937,7 +937,7 @@ export const zones = [
     suggestion: "Mori - Japanese forest",
     description:
       "Claude suggestion: 'Mori' (森) is Japanese for 'forest'. The yellow sunlight, dusty cherry-pink, forest greens, water teal, and near-black shadow read as a forest tableau. Could specifically reference Studio Ghibli forest scenes (Totoro, Princess Mononoke) or the 'Mori girl' (森ガール) Japanese fashion subculture that emerged from a Mixi community in 2006, oriented around a 'girl who lives in the forest' aesthetic.",
-    images: { zone: null, reference: '/images/Mori-reference.png' },
+    images: { zone: null, reference: '/images/Mori-reference.webp' },
   },
   {
     id: 'blossom',
@@ -961,7 +961,7 @@ export const zones = [
     suggestion: "Calyx - Greek for flower bud",
     description:
       "Claude suggestion: kalyx (κάλυξ) is Ancient Greek for 'husk' or 'flower bud' - the cup of sepals at the base of a flower. The mixed petal-tone palette (cyan, coral, teal, pink, lavender, cream, near-black) reads as a varied floral study. Less likely alternate: Calyx the British drum-and-bass producer (Larry Cons, Moving Shadow / Metalheadz), but the palette doesn't strongly suggest that musical context.",
-    images: { zone: null, reference: '/images/Calyx-reference.jpg' },
+    images: { zone: null, reference: '/images/Calyx-reference.webp' },
   },
 
   // ─── UNKNOWN ─────────────────────────────────────────────────────────────
