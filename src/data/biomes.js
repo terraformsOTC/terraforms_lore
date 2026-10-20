@@ -15,6 +15,7 @@ export const BIOME_CATEGORIES = {
   art:          { label: 'art',           color: '#60a5fa' },
   architecture: { label: 'architecture',  color: '#fb923c' },
   abstract:     { label: 'abstract',      color: '#d4d4d4' },
+  technology:   { label: 'technology',    color: '#38bdf8' },
 };
 
 // Biome collector sets — groups of biomes sharing a character theme
@@ -114,7 +115,21 @@ export const biomes = [
   { id: bid(27), number: 27, name: 'Biome 27', nickname: null, status: 'unknown', category: null, rarity: rarity(27), images: null, guess: null, set: 'chess', characterSet: '🗠🗠░🖳░🗠🗠░♖' },
   { id: bid(28), number: 28, name: 'Biome 28', nickname: null, status: 'unknown', category: null, rarity: rarity(28), images: null, guess: null, characterSet: '🗡░🗡⋆🗡🗡░░🗡' },
   { id: bid(29), number: 29, name: 'Biome 29', nickname: null, status: 'unknown', category: null, rarity: rarity(29), images: null, guess: null, characterSet: '🗡░🗡⋆🗡⛱░░⛱' },
-  { id: bid(30), number: 30, name: 'Biome 30', nickname: null, status: 'unknown', category: null, rarity: rarity(30), images: null, guess: null, characterSet: '⛓░❀🗠❀⛓❀░⛓' },
+  {
+    id: bid(30),
+    number: 30,
+    name: 'Biome 30',
+    nickname: 'Daisy Chain',
+    status: 'uncertain',
+    category: 'technology',
+    rarity: rarity(30),
+    images: null,
+    guess: 'Daisy chain (electrical engineering)',
+    description:
+      'The character set alternates ⛓ (chains) with ❀ (a florette, read as a daisy): a daisy chain. In electrical and electronic engineering, a daisy chain is a wiring scheme that connects devices one after another, in a line or a ring, named after a garland of daisies. MIDI gear, SCSI drives, Thunderbolt devices and DisplayPort monitors are all chained this way. Biome 30 is the only biome that pairs the two glyphs.',
+    referenceLink: 'https://en.wikipedia.org/wiki/Daisy_chain_(electrical_engineering)',
+    characterSet: '⛓░❀🗠❀⛓❀░⛓',
+  },
   { id: bid(31), number: 31, name: 'Biome 31', nickname: null, status: 'unknown', category: null, rarity: rarity(31), images: null, guess: null, characterSet: '⛓░🗡🗠🗡⛓➫░⛓' },
   {
     id: bid(32),
