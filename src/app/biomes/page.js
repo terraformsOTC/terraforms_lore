@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ItemCard from '@/components/ItemCard';
-import { biomes, confirmedBiomes, uncertainBiomes, unknownBiomes, BIOME_CATEGORIES, BIOME_SETS } from '@/data/biomes';
+import { biomes, seedTraits, confirmedBiomes, uncertainBiomes, unknownBiomes, BIOME_CATEGORIES, BIOME_SETS } from '@/data/biomes';
 
 const FILTERS = [
   { key: 'all',       label: 'all' },
@@ -39,6 +39,17 @@ export default function BiomesPage() {
         <p className="text-sm mb-10 dim-35">
           {confirmedBiomes.length} confirmed &nbsp;·&nbsp; {uncertainBiomes.length} uncertain &nbsp;·&nbsp; {unknownBiomes.length} unknown &nbsp;·&nbsp; 92 total biomes
         </p>
+
+        <h2 className="text-sm mb-2">seed traits</h2>
+        <p className="text-xs mb-4 dim-40" style={{ lineHeight: '1.6' }}>
+          Not biomes, but they change which characters appear in the animation, so they sit here for now.
+        </p>
+        <div className="grid-border mb-10" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))' }}>
+          {seedTraits.map((trait) => (
+            <ItemCard key={trait.id} item={trait} href={`/biomes/${trait.id}`}
+              category={BIOME_CATEGORIES[trait.category]} linkUnknown />
+          ))}
+        </div>
 
         <div className="flex flex-wrap gap-3 mb-5">
           {FILTERS.map(({ key, label }) => (

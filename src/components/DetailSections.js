@@ -29,6 +29,28 @@ export function ImageGrid({ images, name, altText, isTheory, sampleLabel = 'zone
   );
 }
 
+export function VideoEmbed({ video }) {
+  if (!video) return null;
+
+  return (
+    <div className="mb-10">
+      <p className="text-xs mb-2 dim-55">reference video</p>
+      <iframe
+        src={video.src}
+        title={video.title}
+        loading="lazy"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        className="w-full block"
+        style={{ aspectRatio: '16 / 9', border: 'none' }}
+      />
+      <a href={video.link} target="_blank" rel="noopener noreferrer" className="text-xs dim-55 inline-block mt-2">
+        watch on vimeo ↗
+      </a>
+    </div>
+  );
+}
+
 export function MetadataTable({ rows }) {
   const valid = rows.filter((r) => r.value);
   if (valid.length === 0) return null;
@@ -53,9 +75,11 @@ export function ExternalLinks({ referenceLink, explorerUrl, sourceUrl }) {
           reference ↗
         </a>
       )}
-      <a href={explorerUrl} target="_blank" rel="noopener noreferrer" className="text-xs dim-55">
-        view on explorer ↗
-      </a>
+      {explorerUrl && (
+        <a href={explorerUrl} target="_blank" rel="noopener noreferrer" className="text-xs dim-55">
+          view on explorer ↗
+        </a>
+      )}
       {sourceUrl && (
         <a href={sourceUrl} target="_blank" rel="noopener noreferrer" className="text-xs dim-55">
           source thread ↗

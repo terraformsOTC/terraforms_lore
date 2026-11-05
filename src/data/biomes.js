@@ -283,6 +283,43 @@ export const biomes = [
   { id: bid(91), number: 91, name: 'Biome 91', nickname: null, status: 'unknown', category: null, rarity: rarity(91), images: null, guess: null, characterSet: '🟣╚╔╣╣═══⛓' },
 ];
 
+// Seed traits are not biomes, but they change which characters appear in a parcel's
+// animation, so they sit on the biomes page for now (James, 2026-11-05). They stay out
+// of `biomes` so the biome counts and filters still cover the 92 biomes alone.
+export const seedTraits = [
+  {
+    id: 'x-seed',
+    name: 'X-Seed',
+    nickname: null,
+    status: 'confirmed',
+    category: 'art',
+    reference: 'unicode - Jörg Piringer',
+    description:
+      'X-Seed is influenced by unicode, a work by the artist Jörg Piringer that shows all displayable characters in the Unicode range 0 - 65536 (49,571 characters), one character per frame, across 33 minutes of video. X-Seed is not a biome: it is a trait that changes which characters appear in a parcel\'s animation, running through the full onchain character set. Origin parcels with a seed above 9000 and other parcels with a seed above 9970 have it.',
+    images: null,
+    referenceLink: 'http://joerg.piringer.net/unicode/',
+    video: {
+      src: 'https://player.vimeo.com/video/36132600?dnt=1',
+      title: 'unicode by Jörg Piringer',
+      link: 'https://vimeo.com/36132600',
+    },
+  },
+  {
+    id: 'y-seed',
+    name: 'Y-Seed',
+    nickname: null,
+    status: 'unknown',
+    category: null,
+    reference: null,
+    description:
+      'Y-Seed is not a biome: it is a trait that changes which characters appear in a parcel\'s animation, using 1 of 3 additional character sets. Non-origin parcels with a seed above 9950 and up to 9970 have it. We have no known reference for it yet.',
+    images: null,
+  },
+];
+
+// Everything with its own page under /biomes.
+export const biomePages = [...seedTraits, ...biomes.filter(b => b.status !== 'unknown')];
+
 export const confirmedBiomes = biomes.filter(b => b.status === 'confirmed');
 export const uncertainBiomes  = biomes.filter(b => b.status === 'uncertain');
 export const unknownBiomes   = biomes.filter(b => b.status === 'unknown');

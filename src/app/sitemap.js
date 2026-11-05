@@ -1,5 +1,5 @@
 import { zones } from '@/data/zones';
-import { biomes } from '@/data/biomes';
+import { biomePages } from '@/data/biomes';
 
 const BASE = 'https://terraformlore.xyz';
 
@@ -12,8 +12,7 @@ export default function sitemap() {
       priority: 0.8,
     }));
 
-  const biomeUrls = biomes
-    .filter((b) => b.status !== 'unknown')
+  const biomeUrls = biomePages
     .map((b) => ({
       url: `${BASE}/biomes/${b.id}`,
       lastModified: new Date(),

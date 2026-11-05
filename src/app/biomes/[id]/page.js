@@ -2,16 +2,16 @@ import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import StatusBadge from '@/components/StatusBadge';
-import { ImageGrid, ExternalLinks } from '@/components/DetailSections';
-import { biomes, BIOME_CATEGORIES, BIOME_SETS } from '@/data/biomes';
+import { ImageGrid, ExternalLinks, VideoEmbed } from '@/components/DetailSections';
+import { biomePages, seedTraits, BIOME_CATEGORIES, BIOME_SETS } from '@/data/biomes';
 
 export async function generateStaticParams() {
-  return biomes.filter((b) => b.status !== 'unknown').map((b) => ({ id: b.id }));
+  return biomePages.map((b) => ({ id: b.id }));
 }
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
-  const biome = biomes.find((b) => b.id === id);
+  const biome = biomePages.find((b) => b.id === id);
   if (!biome) return {};
   const title = biome.nickname
     ? `${biome.name} - ${biome.nickname} - terraform lore`
@@ -25,13 +25,14 @@ export async function generateMetadata({ params }) {
 
 export default async function BiomePage({ params }) {
   const { id } = await params;
-  const biome = biomes.find((b) => b.id === id);
-  if (!biome || biome.status === 'unknown') notFound();
+  const biome = biomePages.find((b) => b.id === id);
+  if (!biome) notFound();
 
   const isTheory = biome.status === 'uncertain';
   const cat = BIOME_CATEGORIES[biome.category];
   const biomeSet = BIOME_SETS[biome.set];
-  const ref = biome.guess || biome.reference;
+  const ref = biome.guess || biome.reference || 'unknown';
+  const isSeedTrait = seedTraits.includes(biome);
   const displayTitle = biome.nickname ? `${biome.name} - ${biome.nickname}` : biome.name;
 
   return (
@@ -80,11 +81,13 @@ export default async function BiomePage({ params }) {
         <p className="text-sm mb-8" style={{ opacity: isTheory ? 0.45 : 0.7 }}>{ref}</p>
         <p className="text-sm mb-10 dim-65" style={{ lineHeight: '1.8' }}>{biome.description}</p>
 
+        <VideoEmbed video={biome.video} />
+
         <ImageGrid images={biome.images} name={biome.name} altText={ref} isTheory={isTheory} sampleLabel="biome sample" />
 
         <ExternalLinks
           referenceLink={biome.referenceLink}
-          explorerUrl="https://terraformexplorer.xyz/biomes"
+          explorerUrl={isSeedTrait ? null : 'https://terraformexplorer.xyz/biomes'}
           sourceUrl={biome.sourceUrl}
         />
 

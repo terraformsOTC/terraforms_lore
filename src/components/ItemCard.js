@@ -16,7 +16,7 @@ import StatusBadge from './StatusBadge';
 export default function ItemCard({ item, href, category, subtitle, palette, set, linkUnknown = false }) {
   if (item.status === 'unknown') {
     const card = (
-      <div className="card-border p-4 flex items-center justify-between">
+      <div className="card-border p-4 flex items-center justify-between h-full">
         <div>
           <span className="text-sm dim-40">{item.name}</span>
           {subtitle && <span className="text-xs ml-2 dim-20">- {subtitle}</span>}
@@ -37,7 +37,7 @@ export default function ItemCard({ item, href, category, subtitle, palette, set,
       </div>
     );
     return linkUnknown
-      ? <Link href={href} className="block" style={{ textDecoration: 'none', color: 'inherit' }}>{card}</Link>
+      ? <Link href={href} className="block h-full" style={{ textDecoration: 'none', color: 'inherit' }}>{card}</Link>
       : card;
   }
 

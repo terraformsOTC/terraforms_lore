@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 import { readFileSync } from 'fs';
 import { join } from 'path';
-import { biomes } from '@/data/biomes';
+import { biomePages } from '@/data/biomes';
 
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
@@ -16,12 +16,12 @@ function getFonts() {
 }
 
 export function generateStaticParams() {
-  return biomes.filter((b) => b.status !== 'unknown').map((b) => ({ id: b.id }));
+  return biomePages.map((b) => ({ id: b.id }));
 }
 
 export default async function Image({ params }) {
   const { id } = await params;
-  const biome = biomes.find((b) => b.id === id);
+  const biome = biomePages.find((b) => b.id === id);
   if (!biome) return new ImageResponse(<div>Not found</div>, { ...size });
 
   const { fontData, fontData2, monoData } = getFonts();
