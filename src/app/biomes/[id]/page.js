@@ -2,8 +2,9 @@ import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import StatusBadge from '@/components/StatusBadge';
-import { ImageGrid, ExternalLinks, VideoEmbed } from '@/components/DetailSections';
+import { ParcelAndReference, ExternalLinks, VideoEmbed } from '@/components/DetailSections';
 import { biomePages, seedTraits, BIOME_CATEGORIES, BIOME_SETS } from '@/data/biomes';
+import { BIOME_PARCEL_IDS } from '@/data/parcelIds';
 
 export async function generateStaticParams() {
   return biomePages.map((b) => ({ id: b.id }));
@@ -81,9 +82,16 @@ export default async function BiomePage({ params }) {
         <p className="text-sm mb-8" style={{ opacity: isTheory ? 0.45 : 0.7 }}>{ref}</p>
         <p className="text-sm mb-10 dim-65" style={{ lineHeight: '1.8' }}>{biome.description}</p>
 
-        <VideoEmbed video={biome.video} />
+        <ParcelAndReference
+          parcelIds={BIOME_PARCEL_IDS[biome.id]}
+          name={biome.name}
+          label={isSeedTrait ? `${biome.name} parcel` : 'biome parcel'}
+          image={biome.images?.reference}
+          altText={ref}
+          isTheory={isTheory}
+        />
 
-        <ImageGrid images={biome.images} name={biome.name} altText={ref} isTheory={isTheory} sampleLabel="biome sample" />
+        <VideoEmbed video={biome.video} />
 
         <ExternalLinks
           referenceLink={biome.referenceLink}

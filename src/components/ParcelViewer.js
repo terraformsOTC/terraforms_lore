@@ -3,10 +3,10 @@
 import { useState, useEffect } from 'react';
 
 /**
- * Renders a randomly selected live parcel from a zone as an animated iframe.
+ * Renders a randomly selected live parcel from a zone or biome as an animated iframe.
  * Picks a new random parcel each time the page is loaded.
  */
-export default function ParcelViewer({ parcelIds, zoneName }) {
+export default function ParcelViewer({ parcelIds, name, label }) {
   const [tokenId, setTokenId] = useState(null);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function ParcelViewer({ parcelIds, zoneName }) {
 
   return (
     <div>
-      <p className="text-xs mb-2 dim-55">zone parcel</p>
+      <p className="text-xs mb-2 dim-55">{label}</p>
       <div style={{ position: 'relative', width: '100%', maxWidth: '277px', aspectRatio: '277 / 400' }}>
         {/* Loading placeholder */}
         <div
@@ -27,7 +27,7 @@ export default function ParcelViewer({ parcelIds, zoneName }) {
           <iframe
             key={tokenId}
             src={`https://tokens.mathcastles.xyz/terraforms/token-html/${tokenId}`}
-            title={`${zoneName} parcel #${tokenId}`}
+            title={`${name} parcel #${tokenId}`}
             scrolling="no"
             sandbox="allow-scripts"
             style={{ width: '100%', height: '100%', border: 'none', display: 'block' }}

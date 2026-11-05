@@ -3,26 +3,27 @@
  * Eliminates ~120 lines of duplication between zones/[id] and biomes/[id].
  */
 
-// Used by biome detail pages (two static images, equal columns).
-// Zone detail pages use ParcelViewer + inline reference instead (fixed 277px parcel column).
-export function ImageGrid({ images, name, altText, isTheory, sampleLabel = 'zone parcel' }) {
-  if (!images || (!images.zone && !images.reference)) return null;
+import ParcelViewer from './ParcelViewer';
+
+// A live parcel beside the reference image, on zone and biome pages alike.
+export function ParcelAndReference({ parcelIds, name, label, image, altText, isTheory }) {
+  if (!parcelIds && !image) return null;
 
   return (
     <div
-      className="grid gap-4 mb-10"
-      style={{ gridTemplateColumns: images.zone && images.reference ? '1fr 1fr' : '1fr' }}
+      className="grid gap-6 mb-10"
+      style={{ gridTemplateColumns: parcelIds && image ? '277px 1fr' : '277px' }}
     >
-      {images.zone && (
-        <div>
-          <p className="text-xs mb-2 dim-55">{sampleLabel}</p>
-          <img src={images.zone} alt={`${name} ${sampleLabel}`} className="w-full block" loading="lazy" />
-        </div>
-      )}
-      {images.reference && (
+      {parcelIds && <ParcelViewer parcelIds={parcelIds} name={name} label={label} />}
+      {image && (
         <div>
           <p className="text-xs mb-2 dim-55">{isTheory ? 'possible reference' : 'reference'}</p>
-          <img src={images.reference} alt={altText} className="w-full block" loading="lazy" />
+          <img
+            src={image}
+            alt={altText}
+            loading="lazy"
+            style={{ display: 'block', width: '100%', maxHeight: '400px', objectFit: 'contain', objectPosition: 'left top' }}
+          />
         </div>
       )}
     </div>

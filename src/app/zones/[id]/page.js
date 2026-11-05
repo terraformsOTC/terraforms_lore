@@ -2,8 +2,7 @@ import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import StatusBadge from '@/components/StatusBadge';
-import ParcelViewer from '@/components/ParcelViewer';
-import { MetadataTable, ExternalLinks } from '@/components/DetailSections';
+import { ParcelAndReference, MetadataTable, ExternalLinks } from '@/components/DetailSections';
 import HypercastleMap, { groupHypercastle, levelLabel } from '@/components/HypercastleMap';
 import { zones, CATEGORIES } from '@/data/zones';
 import { ZONE_PARCEL_IDS } from '@/data/parcelIds';
@@ -97,7 +96,6 @@ export default async function ZonePage({ params }) {
   const ref = isUnknown ? 'unknown' : zone.suggestion || zone.guess || zone.reference;
   const description = isUnknown ? UNKNOWN_DESCRIPTION : zone.description;
   const parcelIds = ZONE_PARCEL_IDS[id] || null;
-  const hasReference = zone.images?.reference;
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -170,28 +168,14 @@ export default async function ZonePage({ params }) {
           </div>
         )}
 
-        {/* Parcel + reference image side by side */}
-        {(parcelIds || hasReference) && (
-          <div
-            className="grid gap-6 mb-10"
-            style={{ gridTemplateColumns: parcelIds && hasReference ? '277px 1fr' : '277px' }}
-          >
-            {parcelIds && (
-              <ParcelViewer parcelIds={parcelIds} zoneName={zone.name} />
-            )}
-            {hasReference && (
-              <div>
-                <p className="text-xs mb-2 dim-55">{isTheory ? 'possible reference' : 'reference'}</p>
-                <img
-                  src={zone.images.reference}
-                  alt={ref}
-                  loading="lazy"
-                  style={{ display: 'block', width: '100%', maxHeight: '400px', objectFit: 'contain', objectPosition: 'left top' }}
-                />
-              </div>
-            )}
-          </div>
-        )}
+        <ParcelAndReference
+          parcelIds={parcelIds}
+          name={zone.name}
+          label="zone parcel"
+          image={zone.images?.reference}
+          altText={ref}
+          isTheory={isTheory}
+        />
 
         {!isTheory && (
           <MetadataTable rows={[
