@@ -602,6 +602,18 @@ export const zones = [
     images: { zone: null, reference: '/images/southpark-reference.webp' },
   },
   {
+    id: 'dynacrypts',
+    name: 'Dynacrypts',
+    status: 'uncertain',
+    category: 'technology',
+    hypercastle: [{ level: 13, elevation: -1 }],
+    palette: ['#f98284', '#feaae4', '#b0a9e4', '#accce4', '#b3e3da', '#b0eb93', '#fff7a0', '#ffc384', '#dea38b', '#28282e'],
+    guess: "Dynabook - Alan Kay, 1972?",
+    description: "Community theory: the 'Dyna' in Dynacrypts may point to the Dynabook, the portable educational computer Alan Kay envisioned on January 1, 1968 and described in his 1972 proposal \"A personal computer for children of all ages\". Its ideas led to the Xerox Alto prototype, originally called \"the interim Dynabook\", and its software became Smalltalk. Kay still thinks the Dynabook hasn't been invented yet, because key software and educational curricula are missing.",
+    referenceLink: 'https://en.wikipedia.org/wiki/Dynabook',
+    images: null,
+  },
+  {
     id: 'sun',
     name: '[SUN]',
     status: 'uncertain',
@@ -968,7 +980,6 @@ export const zones = [
   { id: 'boss',   name: '[BOSS]',  status: 'unknown', category: null, palette: ['#f8f7ff', '#ee0000'], images: null, hypercastle: [{ level: 11, elevation: 2 }] },
   { id: 'home',   name: '[HOME]',  status: 'unknown', category: null, palette: ['#303030', '#fff5e6'], images: null, hypercastle: [{ level: 11, elevation: 4 }, { level: 11, elevation: -3 }] },
   { id: 'wen',         name: '[WEN]',         status: 'unknown', category: null, palette: ['#fffdf0', '#1e1c32'], images: null, hypercastle: [{ level: 11, elevation: -1 }] },
-  { id: 'dynacrypts',   name: 'Dynacrypts',    status: 'unknown', category: null, palette: ['#f98284', '#feaae4', '#b0a9e4', '#accce4', '#b3e3da', '#b0eb93', '#fff7a0', '#ffc384', '#dea38b', '#28282e'], images: null, hypercastle: [{ level: 13, elevation: -1 }] },
   { id: 'pfpfpfpbbx80', name: 'Pfpfpfpbbx80', status: 'unknown', category: null, palette: ['#f772b5', '#435d5a', '#5a7b70', '#e83b3b', '#ccdf6d', '#aede6a', '#ffffff', '#e4dde7'], images: null, hypercastle: [{ level: 15, elevation: 1 }] },
   { id: 'valeria',      name: 'Valeria',       status: 'unknown', category: null, palette: ['#fe004f', '#04a15c', '#fd8901', '#2c2827'], images: null, hypercastle: [{ level: 13, elevation: -3 }] },
 ];
